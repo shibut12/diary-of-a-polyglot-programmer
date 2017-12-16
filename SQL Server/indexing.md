@@ -1,3 +1,44 @@
+## Pages
+* Fundamental unit of data storage or IO in SQL server
+* 1 Page is 8K
+* Each page begins with a 96 byte header
+* Maximum amount of datat stored in  a single row on a page is 8060 bytes.
+
+## Extents
+* Are collection of eight physically contigious pages.
+
+## HEAP
+* Is a table without clustered index
+* Data rows are _not_ stored in any particular order
+* data pages are not linked in a linked list
+
+_Eg_ : An apartment has 200 units, if we consider all the units inthis apratment are in a Heap, there wont be any specific order for their location. To find any apartment, you would need to knock on the door of all apratments till find the one oyu want.
+
+## Clustered Index
+* Data rows are stored in order based on the clustered index key
+* The clustered index key is implemented as a  __B-Tree__ index
+* data pages in the leaf level are linked in a doubly linked list
+* Clustered indexes have one row in sys.partitions with _index_id=1_
+   * If _index_id>1, then it is a non-clustered index
+   * If _index_id=0, then it is a Heap
+
+## Non-clustered Index
+* Non-clustered index have a B-tree index structure similar to the one in Clustered index.
+   * The difference is that __non-clustered index__does not affect the order of the data rows.
+* Each index row contains the non clustered key value, a row locator and any or non-key columns.
+
+### Difference between clustered and non clustered indexes
+| Clustered index                           | Non clustered index                                                                           |
+--------------------------------------------|-----------------------------------------------------------------------------------------------|
+|Only one clustered Index per table           |  249 Indexes per table                                                                        |
+|Sort records and store data in that order  | Dont affect physical order, cerates a logical order and use pointers to physical data pages   |
+|Faster for data reads                      | Faster Data insertion, updates                                                                |
+|Dont need extra space to store logical structure| use extrac space to store logical structure                                              |
+## Fill factor
+* A method used for pre allocating space for future expansion for a particular row
+* To avoid __pagesplits__ and degrade performance.
+* SQL server doesnt allocate space unless you used fixed length types
+   * If you used _variable_ length data type like _varchar / nvarchar_, there is possiblity that the length of these rows can change in future.
 ## Primary key
 * Primary key automatically creates clustered index
   * Except when "non-clustered" or "clustered" index is specified
