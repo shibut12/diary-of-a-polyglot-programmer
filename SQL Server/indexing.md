@@ -289,8 +289,48 @@ go
 ```
 
 5. Create clustered index
-
-
+```sql 
+alter table [Sales].[InclsalesOrderDetail]
+    add constraint [pk_InclSalesorderDetail_SalesOrderDetailID]
+    primary key clustered
+    ([SalesOrderedDetailID] asc) on [primary]
+go
+```
+6. select and distinct
+```sql
+select [SalesOrderId], [ProductID], [col1]
+from [Sales].[InclSalesOrderDetail] sod
+where sod.[SalesOrderId] > 40000
+ and sod.[SalesOrderID] < 50000
+go
+```
+7. Create included index
+   * Included index is needd if the coposit key length is greater than 900 bytes
+```sql
+create nonclustered index [ix_inclSalesOrderDetail_included]
+    on [sales].[InclSalesOrderDetail]
+    ([SalesOrderID])
+    include ([ProductID],[col1])
+    on[primary]
+go
+```
+8. select and distinct
+```sql
+select [SalesOrderId], [ProductID], [col1]
+from [Sales].[InclSalesOrderDetail] sod
+where sod.[SalesOrderId] > 40000
+ and sod.[SalesOrderID] < 50000
+go
+```
 
 ## Filtered Index
+* Improves query performance and optimize query plan
+* Reduce index maintenance costs
+* Reduces index storage costs
+
+__Best practice__: Use filtered index when well defined subset of results are part of SELECT statement.
 ## Disabled Index
+* Disabling nonclustered index prevents access to index
+* Disabling clustered index prevents access to underlying table
+
+__Best practice__: Disable nonclustered index during bulk insert
