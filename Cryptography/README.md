@@ -33,5 +33,5 @@ HMAC uses 2 passes for mac generation. Secret key is used to generate 2 keys (in
 
 ## Cryptographic hash funtion
 A mathematical algorithm that maps data of different size to  a bit string of a fixed size. This is designed to be a one-way function. 
-## SHA-1
+## SHA-1 (Secure hash algorithms)
 A cryptographic has function that takes an input and produce a 20byte hash value knows  as message digest
