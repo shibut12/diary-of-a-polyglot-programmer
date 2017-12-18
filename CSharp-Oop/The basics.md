@@ -16,7 +16,7 @@
 * Language interoperability - Languages that are compiled to IL, can share code from other languages in the CLR/IL
 ## Intermediate Language (IL)
 * C# code will be converted into IL before it executed.
-## Carbage collection
+## Garbage collection
 * The _Garbage collector_ is .Net's answer to memory management
 * .Net  Runtime depends on Garbage collector by default
 * Removes the dependancy on programmers to take care of memory management (less bugs in production)
