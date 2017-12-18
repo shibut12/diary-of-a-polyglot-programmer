@@ -328,7 +328,7 @@ catch(Type2 ex)
 finally
 {
     //Gets triggerred after
-        //Try block if no errros occured
-        //Catch block after the exception handling is done
+    //Try block if no errros occured
+    //Catch block after the exception handling is done
 }
 ```
