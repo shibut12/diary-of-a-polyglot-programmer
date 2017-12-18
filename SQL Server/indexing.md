@@ -30,7 +30,7 @@ _Eg_ : An apartment has 200 units, if we consider all the units inthis apratment
 ### Difference between clustered and non clustered indexes
 | Clustered index                           | Non clustered index                                                                           |
 --------------------------------------------|-----------------------------------------------------------------------------------------------|
-|Only one clustered Index per table           |  249 Indexes per table                                                                        |
+|Only one clustered Index per table           |  999 Indexes per table                                                                        |
 |Sort records and store data in that order  | Dont affect physical order, cerates a logical order and use pointers to physical data pages   |
 |Faster for data reads                      | Faster Data insertion, updates                                                                |
 |Dont need extra space to store logical structure| use extrac space to store logical structure                                              |
