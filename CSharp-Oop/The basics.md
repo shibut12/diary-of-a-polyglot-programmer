@@ -38,7 +38,7 @@ System.GC.Collect();
     }
     ```
 ### IDispossible
-* Provides a mechanism that allows users of a class to control when resources are freed bu requires discipline to ensure that `Dispose()` is called.
+* Provides a mechanism that allows users of a class to control when resources are freed but requires discipline to ensure that `Dispose()` is called.
 ```csharp
 public class ResourceHandler:IDispossible
 {
@@ -86,11 +86,11 @@ void LogData()
 * Both are stored in RAM
 ### STACK
 * Stack is for static memory allocation
+* Data is stored in Last in First out (LIFO) fashion
 * Each thread gets their stack
 * Data is stored directly into the memory
 * Data access is faster with Stack
 ### HEAP
-* Data is stored in Last in First out (LIFO) fashion
 * Heap is for dynamic memory allocation
 * No enforced pattern for memory allocation
 
