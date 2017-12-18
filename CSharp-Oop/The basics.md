@@ -81,6 +81,7 @@ void LogData()
 * Store data on managed HEAP
 * Ideal for storing large amount of data
    * string
+   * Class
 
 ## Stack and Heap
 * Both are stored in RAM
