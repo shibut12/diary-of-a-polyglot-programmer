@@ -1,2 +1,8 @@
 # Notes
-A collection of notes on various topics
+A growing collection of notes on various topics
+
+* Object oriented Programming
+* CSharp
+* Cryptography
+* SQL Server
+* Architecture
