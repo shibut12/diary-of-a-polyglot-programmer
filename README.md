@@ -6,3 +6,4 @@ A growing collection of notes on various topics
 * Cryptography
 * SQL Server
 * Architecture
+ 
