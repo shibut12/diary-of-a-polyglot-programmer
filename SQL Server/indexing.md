@@ -365,9 +365,64 @@ go
 ```
 
 ## Filtered Index
+These indexes have a `WHERE` clause in the index definition intended to reduce the total number of rows included in the index. This works really good when the most used search criteria are know at the design time
+* Are sub types of clustered indexes
 * Improves query performance and optimize query plan
 * Reduce index maintenance costs
 * Reduces index storage costs
+
+```sql
+use tempdb;
+go
+```
+Create a Table
+```sql
+CREATE TABLE SalesFigures (SalesID INT IDENTITY, SalesAmount Money)
+```
+Insert about a1.4Million records into table
+```sql
+DECLARE @i INT = 1, @Finish INT = 100000
+WHILE (@i < @Finish)
+BEGIN
+Insert SalesFigures (SalesAmount)
+VALUES (100), (200), (300), (350), (375), (400), (425), (478), (512), (550), (700), (750), (900), (1000)
+Set @i+=1
+END
+```
+Create a non clustered index on SalesAmount
+```sql
+CREATE NONCLUSTERED INDEX IX_SalesFigures_SalesAmount 
+ON SalesFigures (SalesAmount)
+GO
+```
+Now select records between 400 and 800
+```sql
+SELECT SalesAmount FROM SalesFigures 
+WHERE SalesAmount BETWEEN 400 AND 800
+```
+If you look at the stats now, the estimated I/O cost would be around 1.4
+Now drop the `Non-clustered Index` and create a `Filtered Non-clustered Index` with `WHERE SalesAmount >= 400 and SalesAmount <= 800` clause.
+```sql
+DROP INDEX SalesFigures.IX_SalesFigures_SalesAmount
+GO
+CREATE NONCLUSTERED INDEX IX_SalesFigures_SalesAmount 
+ON SalesFigures (SalesAmount)
+WHERE SalesAmount >= 400 and SalesAmount <= 800
+GO
+```
+Now run the select query again
+
+```sql
+SELECT SalesAmount FROM SalesFigures 
+WHERE SalesAmount BETWEEN 400 AND 800
+```
+If you check the stats now, you can see the I/O cost is around .7 with is `50%` improvement.
+
+_Under the hood, the filter predicate is stored directly in Sys.Indexes:_
+```sql
+SELECT filter_definition, * FROM Sys.Indexes 
+WHERE Name = 'IX_SalesFigures_SalesAmount'
+```
 
 __Best practice__: Use filtered index when well defined subset of results are part of SELECT statement.
 ## Disabled Index
