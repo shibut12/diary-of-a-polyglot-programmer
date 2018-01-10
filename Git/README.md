@@ -11,6 +11,8 @@ Git allows developers to have any number of local branches that can be entirely 
 * Disposable Experimentation - Create a branch to experiment in, realize its not going to work, and just delete it - abandoning the work without anyone ever see it.
 ### 2. Small and Fast
 Git performs almost all operations performed locally except when pushing changes into a remote, which gives a big performance advantage than the centralized SCM (TFS, VSS etc) as Git does not have to communicate to a server for every action.
+### 3. Distributed
+Git is a distributed SCM, this means instead of `checkout` of current source code, you do a `clone` of the entire repository. This allows multiple backups of the source code.
 
 ## Configuration
 ### Setting Email Address
