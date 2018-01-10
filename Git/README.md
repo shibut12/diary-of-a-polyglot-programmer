@@ -21,6 +21,8 @@ Git has a `staging area` or `index`. This is an intermediate area where commits 
 ### 6. Free and Open source
 Git is released under GPL v2. However, the term `Git` and `logo` are trademarked.
 
+## Read the free book Pro Git online
+[Link to Pro Git ebook](https://git-scm.com/book/en/v2)
 ## Configuration
 ### Setting Email Address
 #### For a single repository
