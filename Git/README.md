@@ -13,6 +13,13 @@ Git allows developers to have any number of local branches that can be entirely 
 Git performs almost all operations performed locally except when pushing changes into a remote, which gives a big performance advantage than the centralized SCM (TFS, VSS etc) as Git does not have to communicate to a server for every action.
 ### 3. Distributed
 Git is a distributed SCM, this means instead of `checkout` of current source code, you do a `clone` of the entire repository. This allows multiple backups of the source code.
+### 4. Data assurance
+The data model that Git uses ensures the cryptographic integrity of every bit of your projects. Every file in the `commit` is check summed and retrieved by its checksum when check out. it is impossible to retrieve an in correct file.
+### 5. Staging area
+Git has a `staging area` or `index`. This is an intermediate area where commits can be formatted and reviewed before completing the commit. Git also allows to commit specific files using `commit -a`. 
+![Git commit image](https://git-scm.com/images/about/index1@2x.png)
+### 6. Free and Open source
+Git is released under GPL v2. However, the term `Git` and `logo` are trademarked.
 
 ## Configuration
 ### Setting Email Address
