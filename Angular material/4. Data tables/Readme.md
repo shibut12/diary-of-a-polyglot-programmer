@@ -1,3 +1,11 @@
+# Scope
+* Implement `mat-table` with 
+    1. Pagination
+    2. Sorting
+    3. Filtering
+* Use `MatTabledataSource` instead of implementing own data store
+    1. Set Sort and Paginator in ngAfterViewInit
+    
 # Data tables using MatTable
 MatTable is used for rendering tabular data.
 It provides 3 key features.
