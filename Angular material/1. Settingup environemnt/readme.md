@@ -145,4 +145,4 @@ index.html after updating
 ```
 
 ## Switch css to sass
-refer to seitching css.scss.md
+refer to __switching css to scss.md__
