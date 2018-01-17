@@ -12,7 +12,8 @@ import { FlexboxComponent } from './flexbox/flexbox.component';
   imports: [
     CommonModule,
     DemoRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   declarations: [ButtonsComponent, FlexboxComponent]
 })
