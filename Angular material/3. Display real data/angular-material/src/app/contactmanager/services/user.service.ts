@@ -20,6 +20,10 @@ export class UserService {
      return this._users.asObservable();
    }
 
+   userById(id: number){
+     return this.dataStore.users.find(x=> x.id == id);
+   }
+
    loadAll(){
      const userUrl = 'https://angular-material-api.azurewebsites.net/users';
      return this.http.get<User[]>(userUrl)

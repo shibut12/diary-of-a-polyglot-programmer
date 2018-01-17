@@ -2,6 +2,7 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -17,7 +18,10 @@ export class SidenavComponent implements OnInit {
   
   users: Observable<User[]>;
 
-  constructor(zone: NgZone, private userService: UserService) {
+  constructor(
+    zone: NgZone,
+    private userService: UserService, 
+    private router: Router) {
     this.mediaMatcher.addListener(mql => 
       zone.run(() => this.mediaMatcher = mql));
   }
@@ -27,7 +31,9 @@ export class SidenavComponent implements OnInit {
     this.userService.loadAll();
 
     this.users.subscribe(data=>{
-      console.log(data);
+      if(data.length > 0 ){
+        this.router.navigate(['/contactmanager', data[0].id]);
+      }
     })
   }
 
