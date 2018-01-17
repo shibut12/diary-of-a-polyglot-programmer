@@ -52,3 +52,61 @@ ng g c demo/buttons --dry-run --no-spec --inline-style --inline-template
     > src/app/demo/buttons/buttons.component.ts (259 bytes)
     > update src/app/demo/demo.module.ts (351 bytes)
   ```
+### Services
+Creates singleton shared services that can be injected into app module and can be shared between multiple components / modules.
+1. Create service
+```posh
+ng g s contactmanager\services\user --dry-run
+  > create src/app/contactmanager/services/user.service.spec.ts (405 bytes)
+  > create src/app/contactmanager/services/user.service.ts (117 bytes)
+  ```
+2. Update module to inject service into app
+Add following into ContactmanagerModule.ts
+```ts
+providers: [
+    UserService
+  ]
+```
+Updated ContactmanagerModule.ts
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../shared/material.module';
+
+import { ContactmanagerAppComponent } from './contactmanager-app.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { UserService } from './services/user.service';
+
+const routes: Routes = [
+  { path: '', component: ContactmanagerAppComponent,
+    children: [
+      { path: '', component: MainContentComponent }
+    ] },
+  { path: '**', redirectTo: ''}
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    MaterialModule,
+    FlexLayoutModule,
+    RouterModule.forChild(routes)
+  ],
+  providers: [
+    UserService
+  ],
+  declarations: [ContactmanagerAppComponent, ToolbarComponent, MainContentComponent, SidenavComponent]
+})
+export class ContactmanagerModule { }
+
+```
+### Class
+Following command will generate a class in angular app.
+```posh
+ng g class contactmanager\models\user --dry-run
+  create src/app/contactmanager/models/user.ts (22 bytes)
+```
