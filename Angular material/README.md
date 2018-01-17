@@ -9,3 +9,4 @@ A set of reusable, well tested and accessible components based of google materia
 * Bold graphic and intentional
 * Motion provides meaning
     * Natural acceleration and deceleration
+
