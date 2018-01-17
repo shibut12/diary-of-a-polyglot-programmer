@@ -110,3 +110,50 @@ Following command will generate a class in angular app.
 ng g class contactmanager\models\user --dry-run
   create src/app/contactmanager/models/user.ts (22 bytes)
 ```
+
+## MatIconRegistry
+It is an injectable service that allows you to associate icon names with svg urls and define aliases for css font classes.
+
+Allows to define once and make the icons available to all the components (need the registration in app.component.ts).
+### DomSanitizer Service
+Is a service from angular that prevents XSS vulnerabilities. Any url that pass through MatIconRegistry has to marked trusted by DomSanitizer service.
+### Steps to integrate icon registry
+1. Add following into constructor of app.component.ts
+```ts
+iconRegistry: MatIconRegistry, sanitizer: DomSanitizer
+```
+2. Import MatIconRegistry and DomSanitizer
+```ts
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+```
+3. Add icon set and bypass security for specific urls
+Update constructor as below
+```ts
+iconRegistry.addSvgIconSet(sanitizer.bypassSecurityTrustResourceUrl('assets/avatars.svg'));
+```
+
+Completed `app.component.ts`
+```ts
+import { Component, OnInit } from '@angular/core';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+
+@Component({
+  selector: 'app-contactmanager-app',
+  template: `
+    <app-sidenav></app-sidenav>
+  `,
+  styles: []
+})
+export class ContactmanagerAppComponent implements OnInit {
+
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIconSet(sanitizer.bypassSecurityTrustResourceUrl('assets/avatars.svg'));
+   }
+
+  ngOnInit() {
+  }
+
+}
+```
