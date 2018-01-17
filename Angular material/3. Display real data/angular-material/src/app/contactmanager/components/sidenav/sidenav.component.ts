@@ -1,8 +1,9 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
+import { MatSidenav } from '@angular/material';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -26,15 +27,18 @@ export class SidenavComponent implements OnInit {
       zone.run(() => this.mediaMatcher = mql));
   }
 
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
+
   ngOnInit() {
     this.users = this.userService.users;
     this.userService.loadAll();
 
-    this.users.subscribe(data=>{
-      if(data.length > 0 ){
-        this.router.navigate(['/contactmanager', data[0].id]);
+    this.router.events.subscribe(()=>{
+      if(this.isScreenSmall())
+      {
+        this.sidenav.close();
       }
-    })
+    });
   }
 
   isScreenSmall(): boolean {
