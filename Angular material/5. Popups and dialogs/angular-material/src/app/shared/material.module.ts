@@ -32,7 +32,7 @@ import {
   MatSortModule,
   MatTableModule,
   MatTabsModule,
-  MatStepperModule
+  MatStepperModule,
 } from '@angular/material';
 
 @NgModule({
