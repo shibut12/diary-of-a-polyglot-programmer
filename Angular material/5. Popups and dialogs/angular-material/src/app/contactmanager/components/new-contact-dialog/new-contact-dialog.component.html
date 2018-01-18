@@ -16,6 +16,12 @@
         <input matInput placeholder="Name" [formControl] = "name" [(ngModel)]="user.name" required>
         <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
+
+      <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Born" [(ngModel)]="user.birthDay">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
     
       <mat-form-field>
         <textarea matInput placeholder="Bio" [(ngModel)]="user.bio"></textarea>
