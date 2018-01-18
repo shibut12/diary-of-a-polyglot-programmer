@@ -18,6 +18,7 @@ export class SidenavComponent implements OnInit {
     matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
   
   users: Observable<User[]>;
+  isDarkTheme: boolean = false;
 
   constructor(
     zone: NgZone,
@@ -28,6 +29,9 @@ export class SidenavComponent implements OnInit {
   }
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
+  toggleTheme(){
+    this.isDarkTheme = !this.isDarkTheme;
+  }
 
   ngOnInit() {
     this.users = this.userService.users;
