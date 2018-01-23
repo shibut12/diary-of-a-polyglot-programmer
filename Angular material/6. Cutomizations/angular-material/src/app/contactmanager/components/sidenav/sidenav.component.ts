@@ -19,6 +19,7 @@ export class SidenavComponent implements OnInit {
   
   users: Observable<User[]>;
   isDarkTheme: boolean = false;
+  direction:string = "ltr";
 
   constructor(
     zone: NgZone,
@@ -31,6 +32,9 @@ export class SidenavComponent implements OnInit {
   @ViewChild(MatSidenav) sidenav: MatSidenav;
   toggleTheme(){
     this.isDarkTheme = !this.isDarkTheme;
+  }
+  toggleDir(){
+    this.direction = this.direction == "ltr"? "rtl": "ltr";
   }
 
   ngOnInit() {
