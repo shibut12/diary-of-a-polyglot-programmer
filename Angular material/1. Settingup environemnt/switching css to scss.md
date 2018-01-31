@@ -1,4 +1,17 @@
-1. Open `angular-cli.json` file and update `defaults` section.
+1. update `styles.css` section  to `styles.sass` in `styles` section
+Before
+```json
+"styles": [
+  "styles.css"
+]
+```
+After
+```json
+"styles": [
+  "styles.scss"
+]
+```
+2. Open `angular-cli.json` file and update `defaults` section.
 Before
 ```json
 "defaults": {
@@ -12,19 +25,6 @@ After
     "styleExt": "scss",
     "component": {}
   }
-```
-2. update `styles.css` section  to `styles.sass` in `styles` section
-Before
-```json
-"styles": [
-  "styles.css"
-]
-```
-After
-```json
-"styles": [
-  "styles.scss"
-]
 ```
 3. Rename `src/styles.css` file to `src/styles.scss`
 
