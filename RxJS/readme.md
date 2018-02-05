@@ -29,8 +29,8 @@ In asynchronous model the flow is like below.
 
 I.e
 ```js
-var myOnNext = { it -> do something useful with it };
-var myObservable  = someObservable(itsparameters);
+var myOnNext = { it -> /* do something useful with it*/ };
+var myObservable  = someObservable(itsParameters);
 myObservable.subscribe(myOnNext);
 ```
 
@@ -48,7 +48,7 @@ By definition _onNext_ gets called to when items pushed, _onComplete_ , and _onE
 
 A more completed _subscribe_ will look like following
 ```js
-var myOnNext = { it -> do something useful with it };
+var myOnNext = { it -> /* do something useful with it*/ };
 var myError = { throwable -> /* error handling mechanism */ };
 var myComplete = { /* cleanup after final response */ };
 var myObservable  = someObservable(itsParameters);
@@ -57,5 +57,5 @@ myObservable.subscribe(myOnNext, myError, myComplete);
 ```
 * __Unsubscribing__
 _Unsubscribe_ method is called when _observer_ is no longer interested in any of the observable it is currently subscribed to.
-* Chaining operators
+* __Chaining operators__
 Most operators operate on an _observable_ and return an _Observable_. This allows you to apply these operators one after the other in a chain. Each operator in the chain modifies the _Observable_ that results from the operation of the previous operator.
