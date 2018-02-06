@@ -180,3 +180,207 @@ subscription.unsubscribe();
 ```
 
 ## Subject
+A subject is like an observable, but can multi cast to many observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
+
+* Every subject is an Observable
+
+Given a subject you can `subscribe` to it, providing an Observer, which will start receiving values normally. Internally to the subject, `subscribe` does not invoke a new execution that delivers values. It simply registers the given Observer in a list of Observers, similarly to how `addListener` usually works in other libraries and languages.
+* Every subject is an Observer
+
+It is an Object with the methods `next(v)`, `error(err)`, and `complete()`. To feed a new value to the subject, just call next(theValue), it will be multicasted to the observers registered to listen to the subject.
+
+```js
+var subject = new Rx.subject();
+
+subject.subscribe({
+    next: (v) => console.log('observerA: ' + v)
+});
+subject.subscribe({
+    next: (v) => console.log('observerB: ' + v)
+});
+
+subject.next(1);
+subject.next(2);
+```
+will output following
+```shell
+observerA: 1
+observerB: 1
+observerA: 2
+observerB: 2
+```
+
+Since subject is an observer, you can also provide a subject as the argument to subscribe of any Observable, like below.
+```js
+var subject = new Rx.subject();
+
+subject.subscribe({
+    next: (v) => console.log('observerA: ' + v)
+});
+subject.subscribe({
+    next: (v) => console.log('observerB: ' + v)
+});
+
+var observable = Rx.Observable.from([1,2,3]);
+observable.subscribe(subject);
+```
+will output following
+```shell
+observerA: 1
+observerB: 1
+observerA: 2
+observerA: 2
+observerB: 3
+observerA: 3
+```
+
+### Multicasted Observables
+A multicasted Observable uses a subject under the hood to make multiple observer see the same observable execution.
+
+```js
+var source = Rx.Observable.from([1, 2, 3]);
+var subject = new Rx.Subject();
+var multicasted = source.multicast(subject);
+
+// These are, under the hood, `subject.subscribe({...})`:
+multicasted.subscribe({
+  next: (v) => console.log('observerA: ' + v)
+});
+multicasted.subscribe({
+  next: (v) => console.log('observerB: ' + v)
+});
+
+// This is, under the hood, `source.subscribe(subject)`:
+multicasted.connect();
+```
+
+### Behavior Subject
+* One of the variant of subject is Behavior Subject.
+* behavior subjects are useful for representing "values over time". For instance, an event stream of birthdays is a Subject, but the stream of a person's age would be a BehaviorSubject.
+
+Example: The behavior subject is initialized with value 0, the first observer receives it when it subscribes. The second observer receives the value 2 even though it subscribed after the value 2 was sent.
+```js
+var subject = new Rx.BehaviorSubject(0);
+subject.subscribe({
+    next: (v) => console.log('ObserverA: ' + v)
+});
+
+subject.next(1);
+subject.next(2);
+
+subject.subscribe({
+    next: (v) => console.log('ObserverB: ' + v)
+});
+
+subject.next(3);
+```
+
+Output
+```shell
+observerA: 0
+observerA: 1
+observerA: 2
+observerB: 2
+observerA: 3
+observerB: 3
+```
+
+### Replay Subject
+A replay subject records multiple values from the Observable execution and replays them to new subscribers. Replay subject is similar to behavior subject but it can also record a part of the Observable execution.
+
+* When creating a Replay subject, you can specify how many values to replay.
+
+```js
+var subject = new Rx.ReplaySubject(3) // buffer 3 values for new subscribers
+
+subject.subscribe({
+    next: (v) => console.log('ObserverA: ' + v)
+});
+
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+
+subject.subscribe({
+    next: (v) => console.log('ObserverB: ' + v)
+});
+
+subject.next(5);
+```
+
+Generates following output
+```shell
+observerA: 1
+observerA: 2
+observerA: 3
+observerA: 4
+observerB: 2
+observerB: 3
+observerB: 4
+observerA: 5
+observerB: 5
+```
+### AsyncSubject
+The AsyncSubject is a variant where only the value of the Observable execution is sent to its observers, and only when the execution completes.
+
+```js
+var subject = new Rx.AsyncSubject();
+subject.subscribe({
+    next: (v) => console.log('ObserverA: ' + v)
+});
+
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+
+subject.subscribe({
+    next: (v) => console.log('ObserverB: ' + v)
+});
+
+subject.next(5);
+subject.complete();
+```
+
+Generates following output
+```shell
+observerA: 5
+observerB: 5
+```
+
+## Operators
+Operators are methods on the Observable type such as `.map()`, `.filter()`, `.merge()` etc. When they called they do not change the existing Observable instance. Instead, they return a new `Observable`, whose subscription logic is based on the first Observable.
+
+### Instance operator
+Instance operators are functions that use the `this` keyword to infer what is the input Observable.
+
+```js
+Rx.Observable.prototype.multiplyByTen = function multiplyByTen() {
+  var input = this;
+  return Rx.Observable.create(function subscribe(observer) {
+    input.subscribe({
+      next: (v) => observer.next(10 * v),
+      error: (err) => observer.error(err),
+      complete: () => observer.complete()
+    });
+  });
+}
+
+var observable = Rx.Observable.from([1, 2, 3, 4]).multiplyByTen();
+observable.subscribe(x => console.log(x));
+```
+
+## Static Operator
+Static operators are pure functions attached to the Observable class, and usually are used to create Observables from scratch.
+
+```js
+var observable = Rx.Observable.interval(1000 /* number of milliseconds */);
+```
+
+## Scheduler
+A Scheduler lets you define in what execution context will an Observable deliver notifications to its Observer.
+
+* A Scheduler is a data structure.
+* A Scheduler is an execution context.
+* A Scheduler has a (virtual) clock.
