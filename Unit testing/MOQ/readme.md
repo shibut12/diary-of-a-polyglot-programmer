@@ -31,7 +31,7 @@ Developed from scratch to take full advantage of .net 3.5 (linq expression trees
 var mockedSystemUnderTest = new Mock<ISystemUnderTest>();
 ```
 2. Setup a behavior in a mocked class
-```chasrp
+```csharp
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction("some-value")).Returns(true);
 ```
 3. verify a function is called
@@ -39,7 +39,7 @@ mockedSystemUnderTest.Setup(fn => fn.SomeFunction("some-value")).Returns(true);
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
 ```
 4. Allow any value in a function in a mocked class
-```chasrp
+```csharp
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>())).Returns(true);
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
 ```
