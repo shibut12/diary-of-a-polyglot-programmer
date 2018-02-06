@@ -140,3 +140,30 @@ var unsubscribe = subscribe({next: (x) => console.log(x)});
 //later
 unsubscribe();
 ```
+
+## Observer
+An observer is a consumer of values delivered by an observable. Observers are simply a set of call backs, one for each type of notification delivered by the Observable ( `next`, `error`, and `complete`).
+
+A typical example for observer
+```js
+var observer = {
+    next: x=> console.log('Observer got next value:' + x),
+    error: err => console.log('Observer got an error:' + err),
+    complete: () => console.log('Observer got a complete notification'),
+};
+```
+To use the observer, provide it to the `subscribe` of an `Observable`.
+```js
+observable.subscribe(observer);
+```
+
+Observes are just objects with three callbacks, one for each type of notification that an observable may deliver.
+
+More simplified example
+```js
+observable.subscribe(
+  x => console.log('Observer got a next value: ' + x),
+  err => console.error('Observer got an error: ' + err),
+  () => console.log('Observer got a complete notification')
+);
+```
