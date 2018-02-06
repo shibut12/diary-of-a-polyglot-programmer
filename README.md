@@ -9,8 +9,11 @@ A growing collection of notes on following topics
 * Cryptography
 * Object oriented Programming
 * OData
-## System Software
+## Platform
 * Linux
+* Windows
+* Azure
+* Heroku
 ## Source control
 * Git
 ## Server side
