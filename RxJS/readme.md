@@ -167,3 +167,16 @@ observable.subscribe(
   () => console.log('Observer got a complete notification')
 );
 ```
+
+## Subscription
+A subscription essentially just has an `unsuscribe()` function to release resources or cancel Observable execution.
+```js
+var observable = Rx.Observable.interval(1000);
+var subscription = observable.subscribe(x => console.log(x));
+// Later:
+// This cancels the ongoing Observable execution which
+// was started by calling subscribe with an Observer.
+subscription.unsubscribe();
+```
+
+## Subject
