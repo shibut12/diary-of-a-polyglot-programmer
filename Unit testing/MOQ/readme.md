@@ -38,7 +38,7 @@ mockedSystemUnderTest.Setup(fn => fn.SomeFunction("some-value")).Returns(true);
 ```csharp
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
 ```
-4. Allow any value in a function in a mocked class
+4. Allow any value in function paramters
 ```csharp
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>())).Returns(true);
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
