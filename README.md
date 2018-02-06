@@ -1,7 +1,19 @@
 # Notes
 A growing collection of notes on following topics
 
+** All the documentation included in this repository are colleted from internet. It is basically an electronic version of the notes that I used to collect in many notebooks. I dont intend to share any copyright protected materials here. Let me know if you come across any copy right protected material in my notes. I will take appropriate action.
+
+## Fundamentals
 * Algorithms
+* Architecture
+* Cryptography
+* Object oriented Programming
+* OData
+## System Software
+* Linux
+## Source control
+* Git
+## Server side
 * ASP.NET
     * MVC
     * SignalR
@@ -11,20 +23,26 @@ A growing collection of notes on following topics
 * ASP.NET Core
     * MVC
     * SignalR Core
-* Architecture
-* Cryptography
 * CSharp.Net
 * DataStructures
-* Git
-* MOQ
+* Unit testing
+    * NUnit
+    * XUnit
+    * MOQ
 * Net
     * ADO.NET
     * Entity Framework
     * WCF Data Services
 * Net Core
     * Entity Framework Core
-* NUnit
-* Object oriented Programming
-* OData
-* SQL Server
-* XUnit     
+    * SQL Server
+* NodeJS
+## Client Side
+* Angular
+* Angular Material
+* RxJS
+* Unit Testing
+    * Selenium
+    * KarmaJS
+    * PhantomJS
+    * JasminJS
