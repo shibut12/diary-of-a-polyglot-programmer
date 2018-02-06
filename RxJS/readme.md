@@ -59,3 +59,35 @@ myObservable.subscribe(myOnNext, myError, myComplete);
 _Unsubscribe_ method is called when _observer_ is no longer interested in any of the observable it is currently subscribed to.
 * __Chaining operators__
 Most operators operate on an _observable_ and return an _Observable_. This allows you to apply these operators one after the other in a chain. Each operator in the chain modifies the _Observable_ that results from the operation of the previous operator.
+
+```js
+var foo = Rx.Observable.create(function (observer) {
+  console.log('Hello');
+  observer.next(42);
+});
+
+foo.subscribe(function (x) {
+  console.log(x);
+});
+foo.subscribe(function (y) {
+  console.log(y);
+});
+
+//output
+"Hello"
+42
+"Hello"
+42
+```
+### Anatomy of Observable
+* Creating
+```js
+var observable = Rx.Observable.create(function subscribe(observer){
+    var id = setInterval(()=>{
+        observer.next('hi')
+    }, 1000);
+});
+```
+* Subscribing
+* Executing
+* Disposing
