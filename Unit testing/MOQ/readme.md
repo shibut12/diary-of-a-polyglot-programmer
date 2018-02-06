@@ -25,7 +25,7 @@ Developed from scratch to take full advantage of .net 3.5 (linq expression trees
 ## Ugly
 * Brittleness when code under test, interface, or interaction logic changes
 
-## Coding
+## Code snippets / quick notes about applications
 1. Creating a mock
 ```csharp
 var mockedSystemUnderTest = new Mock<ISystemUnderTest>();
