@@ -32,9 +32,14 @@ var mockedSystemUnderTest = new Mock<ISystemUnderTest>();
 ```
 2. Setup a behavior in a mocked class
 ```chasrp
-mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>())).Returns(true);
+mockedSystemUnderTest.Setup(fn => fn.SomeFunction("some-value")).Returns(true);
 ```
 3. verify a function is called
 ```csharp
+mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
+```
+4. Allow any value in a function in a mocked class
+```chasrp
+mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>())).Returns(true);
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
 ```
