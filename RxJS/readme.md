@@ -89,5 +89,54 @@ var observable = Rx.Observable.create(function subscribe(observer){
 });
 ```
 * Subscribing
+Subscribing to an observable is like calling a function, providing callbacks where the data will be delivered to. You can subscribe to an observable using the `subscribe` method.
+```js
+observable.subscribe(x=>console.log(x));
+```
+A `subscribe` call is simply a way to start an _Observable execution_ and deliver values or events to an observer of that execution.
 * Executing
+The code inside `Observable.create(function subscribe(observer){/*..*/})` represents an _Observable execution_, a lazy computation that only that only happens for each Observer that subscribes. The execution produces multiple values over time, either synchronously or asynchronously.
+
+There are three types of values an Observable execution can deliver.
+    * _Next_ notification: sends a value
+    * _Error_ notification: sends a JavaScript error on exception
+    * _Complete_ notification: does not send a value
+
+In an observable execution, zero to infinite Next notification may be delivered, If either an Error or Complete notification is delivered, then nothing else can be delivered afterwards.
+
+```js
+var observable = Rx.Observable.create(function subscribe(observer){
+    try{
+        observer.next(1);
+        observer.next(2);
+        observer.next(3);
+        observer.complete();
+        observer.next(4) // -> this will not be sent as it violates the contract
+    }
+    catch(err){
+        observer.error(err);
+    }
+});
+```
+
 * Disposing
+When you call `subscribe`, you get a `subscription` back, which represents the ongoing execution. Just call `unsubscribe()` to cancel the execution
+
+```js
+var observable = Rx.Observable.create9function subscribe(observer){
+    //keep track of interval resource
+    var intervalID = setInterval(() => {
+        observer.next('hi');
+    }, 1000);
+
+    // Provide a way to cancel & dispose the interval resource
+    return function unsubscribe(){
+        clearInterval(intervalID);
+    }
+});
+
+var unsubscribe = subscribe({next: (x) => console.log(x)});
+
+//later
+unsubscribe();
+```
