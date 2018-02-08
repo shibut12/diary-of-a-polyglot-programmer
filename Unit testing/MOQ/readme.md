@@ -64,3 +64,7 @@ mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
 ```csharp
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
 ```
+* Verify number of elements in a list that is passed into a mocked function as a parameter, and function called once
+```csharp
+mockedRespository.Verify(fn=>fn.SomeFunction(It.IsAny<List<SomeDTO>>(l=>l.Count==20), Times.Once()))
+```

@@ -25,3 +25,7 @@ var actualValue = someFunction("input parameters");
 Assert.IsTrue(actualValue);
 Assert.IsFalse(actualValue);
 ```
+* Verify throws an exception
+```csharp
+Assert.Throws<NotImplementedException>(()=>someObject.SomeFunction(someParameter));
+```
