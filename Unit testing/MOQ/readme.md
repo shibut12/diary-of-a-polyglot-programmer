@@ -26,27 +26,33 @@ Developed from scratch to take full advantage of .net 3.5 (linq expression trees
 * Brittleness when code under test, interface, or interaction logic changes
 
 ## Code snippets / quick notes about applications
-1. Creating a mock
+### Create
+* Creating a mock
 ```csharp
 var mockedSystemUnderTest = new Mock<ISystemUnderTest>();
 ```
-2. Setup a behavior in a mocked class
+### Setup
+* Setup a function to return a value
 ```csharp
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction("some-value")).Returns(true);
 ```
-3. verify a function is called
-```csharp
-mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
-```
-4. Allow any value in function paramters
+* Allow any value in while Setting up a function
 ```csharp
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>())).Returns(true);
-mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
 ```
-5. Setup function to set out parameter
+* Setup function to set out parameter
 ```csharp
 string param = "test val";
 SomeType object = new SomeType(){ID = 1};
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>(), out param, out object)).Returns(true);
 ```
-This ssetup will cause the some function to return the same out paramters back.
+This setup will cause the some function to return the same out parameters back.
+### Verify
+* Verify a function is called
+```csharp
+mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
+```
+* Allow any value in while verifying a function
+```csharp
+mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
+```
