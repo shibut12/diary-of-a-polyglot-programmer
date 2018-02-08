@@ -32,6 +32,14 @@ Developed from scratch to take full advantage of .net 3.5 (linq expression trees
 var mockedSystemUnderTest = new Mock<ISystemUnderTest>();
 ```
 ### Setup
+* Setup All properties in a mocked objects to their default value
+```csharp
+mockedSystemUnderTest.SetAllProperties();
+```
+* Setup a specific property in a mocked class to return a specific value
+```csharp
+mockedSystemUnderTest.SetGet(prop=>prop.SomeProperty).Returns("SomeValue");
+```
 * Setup a function to return a value
 ```csharp
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction("some-value")).Returns(true);
