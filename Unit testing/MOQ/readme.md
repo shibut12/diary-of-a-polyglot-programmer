@@ -43,3 +43,10 @@ mockedSystemUnderTest.Verify(fn=>fn.SomeFunction("some-value"), Times.Once);
 mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>())).Returns(true);
 mockedSystemUnderTest.Verify(fn=>fn.SomeFunction(It.IsAny<string>()), Times.Once);
 ```
+5. Setup function to set out parameter
+```csharp
+string param = "test val";
+SomeType object = new SomeType(){ID = 1};
+mockedSystemUnderTest.Setup(fn => fn.SomeFunction(It.IsAny<string>(), out param, out object)).Returns(true);
+```
+This ssetup will cause the some function to return the same out paramters back.
