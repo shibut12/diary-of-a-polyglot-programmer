@@ -48,4 +48,4 @@ A growing collection of notes on following topics
     * Selenium
     * KarmaJS
     * PhantomJS
-    * JasminJS
+    * JasminJS 
