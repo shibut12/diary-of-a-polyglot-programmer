@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xunit;
+using NUnit.Framework;
 
 namespace netcore_moq
 {
@@ -30,9 +30,10 @@ namespace netcore_moq
         public int Add(List<int> numbers) => _mathLib.Add(numbers: numbers);
     }
 
+    [TestFixture]
     public class SutMathService
     {
-        [Fact]
+        [Test]
         public void AddVerifyReturnsSumOfNumbers()
         {
         //Given
@@ -40,7 +41,7 @@ namespace netcore_moq
         //When
         
         //Then
-        Assert.Equal(1,1);
+        Assert.AreEqual(1,1);
         }
     }
 }
