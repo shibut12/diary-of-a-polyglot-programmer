@@ -12,6 +12,10 @@ Solid Stands for
 
 ## S - SRP: Single Responsibility Principle
 
+Every module or  a class in a program should have only one responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class. All its services should be narrowly aligned with that responsibility.
+
+Robert C martin expresses this principle as "A class should have only one reason to change".
+
 ## O - OCP: Open Closed Principle
 
 ## L - LSP: Liskov Substitution Principle
