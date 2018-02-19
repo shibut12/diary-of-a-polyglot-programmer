@@ -47,7 +47,7 @@ A growing collection of notes on following topics
 * Angular Material
 * RxJS
 * Unit Testing
-    * Selenium
+    * Selenium 
     * KarmaJS
     * PhantomJS
     * JasminJS 
