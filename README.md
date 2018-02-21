@@ -16,8 +16,9 @@ A growing collection of notes on following topics
 * Windows
 * Azure
 * Heroku
-## Source control
+## Source code verison control
 * Git
+* TFS
 ## Server side
 * ASP.NET
     * MVC
@@ -40,7 +41,8 @@ A growing collection of notes on following topics
     * WCF Data Services
 * Net Core
     * Entity Framework Core
-    * SQL Server
+* SQL Server
+* tSQLt
 * NodeJS
 ## Client Side
 * Angular
