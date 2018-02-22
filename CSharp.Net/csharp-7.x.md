@@ -27,3 +27,11 @@ Release of CSharp is more often. By default the new version of CSharp is turned 
 * Edit .cproject file
 * Code fixes
     * Use a newer feature, VS will suggest upgrading
+
+## New features
+
+1. Async main
+    * Console applications start asynchronous work
+    * Language support for async console applications
+2. Default Literals
+3. Inferred tuple element names
