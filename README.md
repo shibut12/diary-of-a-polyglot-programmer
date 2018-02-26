@@ -43,7 +43,7 @@ A growing collection of notes on following topics
     * Entity Framework Core
 * SQL Server
 * tSQLt
-* NodeJS
+* NodeJS 
 ## Client Side
 * Angular
 * Angular Material
