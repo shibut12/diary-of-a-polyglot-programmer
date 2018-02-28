@@ -69,4 +69,11 @@ Microsoft announced .Net. Microsoft announced, that .Net is a new platform based
 ### November 2005, Visual Studio 2005
 * Third version of .Net
 * .Net Version 2
+* CLR version 2
+    * Very successful
+    * .Net runs inside SQL server
+    * Very useful for bigdata customers, who wants to use huge computing power in SQL server
+    * CLR was more stonger
+    * 64Bit support
+* Generics and partial types
 
