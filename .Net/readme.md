@@ -150,4 +150,46 @@ Microsoft announced .Net. Microsoft announced, that .Net is a new platform based
     * No discussion about silverlight
 
 ### 2011
-    * Silverlight 5 Released
+* Silverlight 5 Released
+* August, First Build conference
+    * Windows 8
+    * Server 2012
+    * Visual Studio 2012 
+        * Microsoft build a team, OpenTech
+            * Focused on ensuing all opensource technologies worked well with .Net
+    * WinJS - Javascript extension for windows
+* Mono for android released
+    * Attachmate acquired mono.
+    * Attachmate did not care to continue development of Mono for Android
+* Miguel and his friend, got the rights from attachmate back and formed a new company
+    * Xamrin
+### 2012
+* Build 2012
+    * Windows 8 ships
+    * WinJS Verison 1
+
+### 2013
+* Visual sturio 2013 released
+    * MVC Version 5
+    * Download only istallers (No more CD/DVD for installers)
+* Windows Azure renamed to Microsoft Azure
+
+### 2014
+* Satya Nadella takes over Steve Balmer
+* Billgates comes back
+* April 2014- Build
+    * .Net foundation
+    * Xamrin
+    * .Net
+    * Roslyn compiler
+    * Cross platform
+    * Windows system center is free for any device with screen size 9" or smaller 
+### 2015
+* Visual Studio 2015
+* Windows 10
+* Microsoft Edge browser
+* MS Open tech rolled back into Microsoft
+* Visual studio code
+* Rewrite .Net into .Net core
+* June 2015, .Net core 1.1
+
