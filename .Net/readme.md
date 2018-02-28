@@ -77,3 +77,77 @@ Microsoft announced .Net. Microsoft announced, that .Net is a new platform based
     * 64Bit support
 * Generics and partial types
 
+### 2006, 
+* First Mix conference
+* Microsoft starts exploring open web.
+* Internet explorer 7 released
+
+### November 2006, Vista
+* Only the enterprise edition released
+
+### March 2007, Windows Vista for reviewers
+* .Net 3.0
+    * Windows presentation foundation
+    * Windows communication foundation
+    * Workflow
+    * Cardspace
+
+### June 2007
+* Iphone released
+
+### July 2007 
+* Intel ships dual core, every processor after this is multi core
+
+### Sometime in 2007 
+* Silverlight - code named, WPF/E
+    * Program in Javascript
+    * Had a runtime for mac
+### 2007
+* Scott Guthire hired following opensource developers in same month
+    * Scott Hanselman
+    * Rob Connery
+    * Phil hack
+
+### October 2007
+* First version of MVC
+
+### November 2008, Visual Studio 2008
+* J# goes away
+* Beginning of designer movement
+    * Expression blend suite
+
+### 2008
+* Silverlight 2
+    *  more capabilites
+    * can edploy to mac
+* Chrome first version
+* Bill Gates steps down
+
+### 2008, PDC
+* First discussion about Azure
+
+### 2009
+* Windows 7
+
+### 2010
+* February, Windows azure ships
+    * SQL Azure
+    * Php
+    * Java
+* Silverlight is maturing
+* March, Ipad released
+    * Begining the end of Flash technology
+    * No plugins to run flash on safari on ipad
+
+* Visual studio 2010
+    * new version of CLR
+    * new version of framework
+    * Parallel extensions
+    * Silverlight woorks woth Chrome 
+    * First version of Visual studio shipped with opensource library jquery.
+
+* October 2010, last PDC
+    * No discussion about silverlight
+
+### 2011
+    * Silverlight 5 Released
