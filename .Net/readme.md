@@ -193,3 +193,7 @@ Microsoft announced .Net. Microsoft announced, that .Net is a new platform based
 * Rewrite .Net into .Net core
 * June 2015, .Net core 1.1
 
+### Whats next
+* .Net Core is gettting matured
+* .Net 4.7.2 is released
+* Cloud is the future
