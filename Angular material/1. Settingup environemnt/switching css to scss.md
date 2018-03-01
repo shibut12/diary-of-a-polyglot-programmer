@@ -1,4 +1,4 @@
-1. update `styles.css` section  to `styles.sass` in `styles` section
+1. In `.angular-cli.json` Update , update `styles.css` section  to `styles.scss` in `styles` section
 Before
 ```json
 "styles": [
@@ -11,7 +11,7 @@ After
   "styles.scss"
 ]
 ```
-2. Open `angular-cli.json` file and update `defaults` section.
+2. in `angular-cli.json` file, update `defaults` section.
 Before
 ```json
 "defaults": {
