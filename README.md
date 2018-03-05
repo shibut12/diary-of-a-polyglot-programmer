@@ -14,7 +14,7 @@ A growing collection of notes on following topics
 ## Platform
 * Linux
 * Windows
-* Azure
+* Azure 
 * Heroku
 ## Source code verison control
 * Git
