@@ -22,7 +22,7 @@ A growing collection of notes on following topics
 ## Server side
 * ASP.NET 
     * MVC
-    * SignalR
+    * SignalR 
     * WCF
     * Web API
     * Web forms
