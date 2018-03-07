@@ -8,7 +8,7 @@ A growing collection of notes on following topics
 * Architecture
 * Cryptography
 * Design Patterns
-* SOLID Principles
+* SOLID Principles 
 * Object oriented Programming
 * OData
 ## Platform
