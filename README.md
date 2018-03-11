@@ -8,13 +8,13 @@ A growing collection of notes on following topics
 * Architecture
 * Cryptography
 * Design Patterns
-* SOLID Principles
+* SOLID Principles 
 * Object oriented Programming
 * OData
 ## Platform
 * Linux
 * Windows
-* Azure
+* Azure 
 * Heroku
 ## Source code verison control
 * Git
@@ -22,7 +22,7 @@ A growing collection of notes on following topics
 ## Server side
 * ASP.NET 
     * MVC
-    * SignalR
+    * SignalR 
     * WCF
     * Web API
     * Web forms
