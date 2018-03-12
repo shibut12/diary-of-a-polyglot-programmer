@@ -4,7 +4,7 @@ use tempdb;
 set nocount on
 
 --Create a table
--- if not exisits = run only if the table not exists
+-- if not exists = run only if the table not exists
 if not exists(select 1 --select only one row from sys.tables
 	from sys.tables where object_id = object_id(N'customer') --object_id() return table's db object id from sys.tables
 	and type = N'U') --type = u says its user defined table
@@ -19,7 +19,7 @@ begin
 end;
 
 --Data insert script
---if exisits = run only if the table exisits
+--if exists = run only if the table exists
 if exists(select 1  --select top 1 from sys.tables
 	from sys.tables where object_id = object_id(N'customer') --object_id() return table's db object id from sys.tables
 	and type = N'U')
