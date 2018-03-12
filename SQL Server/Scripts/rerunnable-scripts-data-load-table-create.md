@@ -1,6 +1,8 @@
 ## Rerunnable Data load and Table create script
 
-This article shows how to create a script that can be used over and over again to create a table and prime it with data. the same script can be used to add or update data in the future, without impacting existing table schema or contents. 
+This article shows how to create a script that can be used over and over again to create a table and prime it with data. the same script can be used to add or update data in the future, without impacting existing table schema or contents. This method makes handling of any table and its contents easy on Source Control or release management.
+
+** A Common use case for this script would be configuration tables which only get updated manually.
 
 ```sql
 use tempdb;
