@@ -17,6 +17,7 @@ Every module or  a class in a program should have only one responsibility over a
 Robert C martin expresses this principle as "A class should have only one reason to change".
 
 ## O - OCP: Open Closed Principle
+A Class is open for extension but close for modification, meaning; Classes must be designed in such a way that a class can be added when a new requirement is generated, this class should be extended while modifying using inheritance.
 
 ## L - LSP: Liskov Substitution Principle
 
