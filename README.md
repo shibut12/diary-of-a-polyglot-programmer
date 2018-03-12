@@ -35,6 +35,7 @@ A growing collection of notes on following topics
     * NUnit
     * XUnit
     * MOQ
+    * tSQLt
 * Net
     * ADO.NET
     * Entity Framework
@@ -42,7 +43,6 @@ A growing collection of notes on following topics
 * Net Core
     * Entity Framework Core
 * SQL Server
-* tSQLt
 * NodeJS 
 ## Client Side
 * Angular
