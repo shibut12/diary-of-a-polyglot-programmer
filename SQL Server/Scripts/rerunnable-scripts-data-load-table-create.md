@@ -30,7 +30,7 @@ if exists(select 1  --select top 1 from sys.tables
 	and type = N'U')
 begin
 	-- create a temporary table to hold records
-	create table #customer( --table name prepend with # are provate tables and only accessible to the process created it
+	create table #customer( --table name prepends with # are private tables and only accessible to the process created it
 		Id int not null primary key,
 		FirstName nvarchar (200),
 		LastName nvarchar(200),
