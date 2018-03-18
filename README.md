@@ -51,5 +51,7 @@ A growing collection of notes on following topics
 * Unit Testing
     * Selenium 
     * KarmaJS
-    * PhantomJS
     * JasminJS 
+* Integration testing
+    * PhantomJS
+    * Headless Chrome
