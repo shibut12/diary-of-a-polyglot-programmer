@@ -7,12 +7,12 @@ Powertools are a set of enhancements, tools , and command-line utilities that in
 * /deletes - To download items deleted from your local disk
 * /diff - To detect items which are different from the workspace version but still have their read-only bit (+R).
 * /noprompt - Do not show the list of items to be deleted and downloaded in a dialog box for confirmation.
-* exclide:filespec[,..] - Files and directories matching a filespec in the given list are excluded from processing
+* /exclide:filespec[,..] - Files and directories matching a filespec in the given list are excluded from processing
 * /preview - Do not make changes, but list the potential changes
-* recursive - Switch from one level of recursion to full recursion
+* /recursive - Switch from one level of recursion to full recursion
 * /diff - Use MD5 hash to compare items from the local disk
-* batchsize:num - Set the batch size for server calls (default 500)
-* filespec - Process only the files and directories matching this list
+* /batchsize:num - Set the batch size for server calls (default 500)
+* /filespec - Process only the files and directories matching this list
 
 ## Commands
 ### tfpt scorch
