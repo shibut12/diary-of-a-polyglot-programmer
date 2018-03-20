@@ -1,5 +1,19 @@
 # TFS Power tools - (TFPT)
 
+Powertools are a set of enhancements, tools , and command-line utilities that increase productivity of Team Foundation server scenarios.
+
+### Options
+
+* /deletes - To download items deleted from your local disk
+* /diff - To detect items which are different from the workspace version but still have their read-only bit (+R).
+* /noprompt - Do not show the list of items to be deleted and downloaded in a dialog box for confirmation.
+* exclide:filespec[,..] - Files and directories matching a filespec in the given list are excluded from processing
+* /preview - Do not make changes, but list the potential changes
+* recursive - Switch from one level of recursion to full recursion
+* /diff - Use MD5 hash to compare items from the local disk
+* batchsize:num - Set the batch size for server calls (default 500)
+* filespec - Process only the files and directories matching this list
+
 ## Commands
 ### tfpt scorch
 
@@ -15,18 +29,6 @@ Ensure source control and local disk are identical, the local disk will be scann
 * Items that are different on disk from the workspace version will be downloaded from server.
 * Items that are missing on disk will also be downloaded.
 * Items with pending changes are exempted
-
-#### Options
-
-* /deletes - To download items deleted from your local disk
-* /diff - To detect items which are different from the workspace version but still have their read-only bit (+R).
-* /noprompt - Do not show the list of items to be deleted and downloaded in a dialog box for confirmation.
-* exclide:filespec[,..] - Files and directories matching a filespec in the given list are excluded from processing
-* /preview - Do not make changes, but list the potential changes
-* recursive - Switch from one level of recursion to full recursion
-* /diff - Use MD5 hash to compare items from the local disk
-* batchsize:num - Set the batch size for server calls (default 500)
-* filespec - Process only the files and directories matching this list
 
 Usage:
 
@@ -48,7 +50,7 @@ tfpt treeclean [/exclude:filespec1, filespec2, ..] [filespec..] [/recursive] [/b
 
 Add or move portal for an existing team project
 
-### addprojectreports
+### Addprojectreports
 
 Add or overwrite reports for an existing team project
 
@@ -68,7 +70,7 @@ Convert, reparent, list, and update branches
 
 Clone, Diff or Dump build definitions
 
-### buildprocesstemplate
+### Buildprocesstemplate
 
 Manage build process templates
 
