@@ -55,3 +55,4 @@ A growing collection of notes on following topics
     * Selenium 
     * PhantomJS
     * Headless Chrome
+    * Puppeteer
