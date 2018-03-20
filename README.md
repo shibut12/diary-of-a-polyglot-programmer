@@ -19,7 +19,7 @@ A growing collection of notes on following topics
 ## Source code verison control
 * Git
 * TFS
-    * TFS Power tools (tfst)
+    * TFS Power tools (tfpt)
 ## Server side
 * ASP.NET 
     * MVC
