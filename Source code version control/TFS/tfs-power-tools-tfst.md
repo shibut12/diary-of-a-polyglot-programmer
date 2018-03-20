@@ -28,8 +28,86 @@ Ensure source control and local disk are identical, the local disk will be scann
 * batchsize:num - Set the batch size for server calls (default 500)
 * filespec - Process only the files and directories matching this list
 
+Usage:
+
 ```shell
 tfpt scorch [/exclude:filespec1, filespec2, ..] [filespec..] [/recursive] [/batchsize:num] [/noprompt] [/preview] [/deletes] [/diff]
 ```
 
-### 
+### tfpt treeclean
+
+Delete files and folders not under version control.
+
+Usage:
+
+```shell
+tfpt treeclean [/exclude:filespec1, filespec2, ..] [filespec..] [/recursive] [/batchsize:num] [/noprompt] [/preview]
+```
+
+### Addprojectportal
+
+Add or move portal for an existing team project
+
+### addprojectreports
+
+Add or overwrite reports for an existing team project
+
+### Annotate
+
+Display line-by-line change information for a file
+
+### Bind
+
+Convert VSS-bound solutions into TFS-bound solutions
+
+### Branches
+
+Convert, reparent, list, and update branches
+
+### Builddefinition
+
+Clone, Diff or Dump build definitions
+
+### buildprocesstemplate
+
+Manage build process templates
+
+### Connections
+
+Modifies Team Explorer client connection settings
+
+### createteamproject
+
+Create a team project
+
+### Getcs
+
+Get only the changes in a particular changeset
+
+### Online
+
+Pend adds, edits, deletes to writable files
+
+### Query
+
+Query for work items
+
+### Review
+
+Review (diff/view) workspace changes
+
+### Searchcs
+
+Search for changesets matching specific criteria
+
+### unshelve
+
+Unshelve into workspace with pending changes
+
+### uu
+
+Undo changes to unchanged files in the workspace
+
+### workitem
+
+Create, update, or view work items
