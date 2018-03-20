@@ -1,4 +1,4 @@
-# TFS Power tools - (TFST)
+# TFS Power tools - (TFPT)
 
 ## Commands
 ### tfpt scorch
