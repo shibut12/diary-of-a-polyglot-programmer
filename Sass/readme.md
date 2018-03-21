@@ -93,9 +93,69 @@ nav a{
 
 ### Partials
 
+Allows you to create partial `Sass` files that contain little snippets of css that you can include in other Sass files. It helps to modularize css files and helps easier to maintain files.
+
+A `partial` is simple a `Sass` file named with a __leading underscore__. `Sass` compiler will not generate css for partial sass files. `Sass` partials are used with the `@import` directive.
+
 ### Import
 
+`@import` allows to combine multiple `partial Sass` files e.g `_file-name.scss`.
+
+_e.g._
+```scss
+//_reset.scss
+html, body, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+// base.scss
+@import 'reset';
+body{
+    font: 100% Helvetica, sans-serief;
+    background-color: #efefef;
+}
+```
+
+Generated css file
+```css
+html, body, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 100% Helvetica, sans-serief;
+    background-color: #efefef;
+}
+```
+
 ### Mixins
+
+`@mixins` allows to make groups of css declarations reuse throughout the web application. Here is an example of using `@mixin` fore vendor prefixes.
+
+```scss
+//Scss script
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.box {
+ @include border-radius(10px);
+}
+```
+Generated css script
+```css
+.box {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+```
+
 
 ### Inheritance
 
