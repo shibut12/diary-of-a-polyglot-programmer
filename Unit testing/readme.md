@@ -1,7 +1,7 @@
 # Unit testing
 ## Scope
 * Unit testing .Net code
-     Unit testing using NUnit
+    * Unit testing using NUnit
     * Unit testing using XUnit.Net
     * Mocking objects using MOQ
 * Unit testing Javascript, Typescript
