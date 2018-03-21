@@ -157,8 +157,62 @@ Generated css script
 ```
 
 
-### Inheritance
+### Extend / Inheritance
+The `@extend` lets you to share a set of css properties from one selector to another. It helps keep your `Sass` very __DRY__.
 
+e.g.
+```scss
+//scss script
+//THis css wo9nt print because %equal-heights is never extended.
+%equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//This css will print because the %message is -shared is extended
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+.message {
+    @extend %message-shared;
+}
+.success {
+    @extend %message-shared;
+    border-color: green;
+}
+.error {
+    @extend %message-shared;
+    border-color: red;
+}
+.warning {
+    @extend %message-shared;
+    border-color: yellow;
+}
+```
+
+Generated css
+```css
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+```
 ### Operators
 
 #### Numerical Operations
@@ -193,7 +247,7 @@ a { color: green; }
 
 ### Data types
 
-SaasScript supports __eight__ data types.
+Saas Script supports __eight__ data types.
 
 1. Numbers (e.g. 1, 2, 10px)
 2. Strings _with or without quotes (e.g. "foo", 'bar', fizz)
@@ -203,4 +257,3 @@ SaasScript supports __eight__ data types.
 6. Lists of values, separated by __comma__ or __space__ (e.g. (key1: value1, key2: value2))
 7. Maps from one value to another ( e.g. $map: (key1: value1, key2: value2))
 8. Function references
-
