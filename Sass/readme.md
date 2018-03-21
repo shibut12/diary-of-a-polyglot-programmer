@@ -18,13 +18,78 @@ Sass is a CSS Pre processor. A scripting language that extends CSS and gets comp
 
 Install [Live SASS extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) for Visual Studio code.
 
-## SASS Script
+## SASS Script features
 
 ### Preprocessing
 
+SASS is a super set of `css`, the scss files are not directly usable on browsers. The scss compiler takes the `*.scss` or `*.scss` files and generate `css` files, which can be consumed in browsers.
+
 ### Variables
 
+`Variables` allow you to store information to reuse through the style sheet. Sass uses `$` to convert anything into a variable.
+
+_e.g._
+```scss
+//scss script
+$font-stack: Helvetica, sans-serief;
+$primary-color: #333;
+
+body{
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+```
+Processed css file
+
+```css
+body{
+    font: 100% Helvetica, sans-serief;
+    color: #333;
+}
+```
+
 ### Nesting
+
+SCSS allows nesting of css selectors, which follows the similar visual hierarchy of nesting  elements in HTML.
+
+_e.g._
+```scss
+// scss script
+nav {
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        display: block;
+        padding: 6px 12 px;
+        text-decoration: none;
+    }
+}
+```
+
+Processed css file
+```css
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav a{
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+```
 
 ### Partials
 
