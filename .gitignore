@@ -289,3 +289,67 @@ __pycache__/
 #CodeCoverage results
 results.xml
 OpenCoverResults.xml
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/notes/notes.component.css
+Angular material/1. Settingup environemnt/angular-material/src/app/app.component.css
+Angular material/1. Settingup environemnt/angular-material/src/app/app.component.css.map
+Angular material/2. Layouts/angular-material/src/app/app.component.css
+Angular material/2. Layouts/angular-material/src/app/app.component.css.map
+Angular material/2. Layouts/angular-material/src/app/contactmanager/components/main-content/main-content.component.css
+Angular material/2. Layouts/angular-material/src/app/contactmanager/components/main-content/main-content.component.css.map
+Angular material/2. Layouts/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css
+Angular material/2. Layouts/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css.map
+Angular material/2. Layouts/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css
+Angular material/2. Layouts/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css.map
+Angular material/2. Layouts/angular-material/src/app/demo/flexbox/flexbox.component.css
+Angular material/2. Layouts/angular-material/src/app/demo/flexbox/flexbox.component.css.map
+Angular material/3. Display real data/angular-material/src/app/app.component.css
+Angular material/3. Display real data/angular-material/src/app/app.component.css.map
+Angular material/3. Display real data/angular-material/src/app/contactmanager/components/main-content/main-content.component.css
+Angular material/3. Display real data/angular-material/src/app/contactmanager/components/main-content/main-content.component.css.map
+Angular material/3. Display real data/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css
+Angular material/3. Display real data/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css.map
+Angular material/3. Display real data/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css
+Angular material/3. Display real data/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css.map
+Angular material/3. Display real data/angular-material/src/app/demo/flexbox/flexbox.component.css
+Angular material/3. Display real data/angular-material/src/app/demo/flexbox/flexbox.component.css.map
+Angular material/4. Data tables/angular-material/src/app/app.component.css
+Angular material/4. Data tables/angular-material/src/app/app.component.css.map
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/main-content/main-content.component.css
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/main-content/main-content.component.css.map
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/notes/notes.component.css
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/notes/notes.component.css.map
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css.map
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css
+Angular material/4. Data tables/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css.map
+Angular material/4. Data tables/angular-material/src/app/demo/flexbox/flexbox.component.css
+Angular material/4. Data tables/angular-material/src/app/demo/flexbox/flexbox.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/app.component.css
+Angular material/5. Popups and dialogs/angular-material/src/app/app.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/main-content/main-content.component.css
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/main-content/main-content.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/new-contact-dialog/new-contact-dialog.component.css
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/new-contact-dialog/new-contact-dialog.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/notes/notes.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css
+Angular material/5. Popups and dialogs/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css.map
+Angular material/5. Popups and dialogs/angular-material/src/app/demo/flexbox/flexbox.component.css
+Angular material/5. Popups and dialogs/angular-material/src/app/demo/flexbox/flexbox.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/app.component.css
+Angular material/6. Cutomizations/angular-material/src/app/app.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/main-content/main-content.component.css
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/main-content/main-content.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/new-contact-dialog/new-contact-dialog.component.css
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/new-contact-dialog/new-contact-dialog.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/notes/notes.component.css
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/notes/notes.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/sidenav/sidenav.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css
+Angular material/6. Cutomizations/angular-material/src/app/contactmanager/components/toolbar/toolbar.component.css.map
+Angular material/6. Cutomizations/angular-material/src/app/demo/flexbox/flexbox.component.css
+Angular material/6. Cutomizations/angular-material/src/app/demo/flexbox/flexbox.component.css.map
+Sass/Code/App1/scss/style.css.map
+Sass/Code/App1/scss/style.css
