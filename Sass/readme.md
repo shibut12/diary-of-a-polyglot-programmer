@@ -14,7 +14,11 @@ Sass is a CSS Pre processor. A scripting language that extends CSS and gets comp
 
 * Saas's SCSS syntax is super set of CSS
 
-## Topics
+## Using SASS
+
+Install [Live SASS extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) for Visual Studio code.
+
+## SASS Script
 
 ### Preprocessing
 
