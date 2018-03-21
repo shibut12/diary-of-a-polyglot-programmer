@@ -1,5 +1,26 @@
-$background-color : yellow;
+$background-color :#f2f2f2;
 $foreground-color : red;
+$font-family: Helvetica, sans-serif;
+
+@import 'colors';
+@import 'mixins';
+
 html{
     background-color: $background-color;
+    font-family: $font-family;
+}
+
+.container{
+    ul{
+        li{
+            padding: 10px;
+        }
+    }
+}
+
+#box {
+    background: red;
+    @include border-radius(5px);
+    height: auto;
+    width: 120px;
 }
