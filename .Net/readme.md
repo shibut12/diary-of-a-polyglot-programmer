@@ -1,3 +1,18 @@
+# Building blocks of .Net
+
+## CLR - Common Language Runtime
+
+Primary role of CLR is to _locate, load, and manage_ .Net objects on your behalf. The *CLR* also takes care of a number of low-level details such as memory management, application hosting, coordinating threads, and performing basic security checks.
+
+## CTS - Common Type System
+
+The _CTS_ specification fully describes all possible data types and all possible programming constructs supported by runtime ,specifies how these entities can interact with each other and details how they are represented in the .Net metadata format.
+
+## CLS - Common Language Specification
+
+_CLS_ is a related specification that defines a subset of common types and programming constructs that all .NEt programming languages can agree on. If a program is built with CLS compliant type, it is assured that all .Net aware languages can consume them.
+
+---
 # History of .Net
 
 ## Problems with different runtime
@@ -9,7 +24,6 @@ Before .Net, following 2 runtimes existed in .Net.
 ### July 2000, Orlando - PDC (Professional Developers Conference)
 
 Microsoft announced .Net. Microsoft announced, that .Net is a new platform based on internet standards, which is why it is called .Net. Microsoft wil publish the specifications for CLR (ECMA 334) and Common language Infrastructure (ECMA 335).
-
 
 ### Year 2000
 * Windows 2000
@@ -196,4 +210,4 @@ Microsoft announced .Net. Microsoft announced, that .Net is a new platform based
 ### Whats next
 * .Net Core is gettting matured
 * .Net 4.7.2 is released
-* Cloud is the future
+* Cloud is the future - Common Type System
