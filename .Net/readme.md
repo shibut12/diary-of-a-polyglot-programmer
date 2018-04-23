@@ -12,6 +12,10 @@ The _CTS_ specification fully describes all possible data types and all possible
 
 _CLS_ is a related specification that defines a subset of common types and programming constructs that all .NEt programming languages can agree on. If a program is built with CLS compliant type, it is assured that all .Net aware languages can consume them.
 
+## Base class libraries
+
+In addition to CLR, CTS, and CTS, .Net platform provides a base class library that is available to all .Net programming languages. This base class library encapsulate various primitives such as threads, file I/O, graphical rendering systems, and interactions with various external hardware devices, but it also provides support for a number of services requried by most real-world applications.
+
 ---
 # History of .Net
 
