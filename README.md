@@ -7,7 +7,7 @@ A growing collection of notes on following topics
 * MQTT
     * Mosquitto MQTT
 ## Fundamentals
-* Algorithms
+* Algorithms 
 * Architecture
 * Cryptography
 * Design Patterns
