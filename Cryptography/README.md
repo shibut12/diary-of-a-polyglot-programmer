@@ -65,5 +65,17 @@ MAC and Cipeher text can be created in parallel
 _Disadvantage_
 
 Even a complicated MAC can still leak information about cipher text.
+
 #### MAC-then-Encrypt
+
+A MAC is created from plain text (p) using a key (k1), then the MAC and plaintext is encrypted using a different key (k2) to created cipher text (c). The cipher then sent to recipient, receiver uses a key (k1) to decrypt cipher to obtain plain text(p) and MAC (t). Then using a different key (k2) receiver calaculated MAC (t). This generated MAC(t) then matched with MAC in the decrypted text to validate auithenticity of the message.
+
+_Advantage_
+
+More secure, because it hides the plain text's (p) authentication tag (t), thus preventing teh trag from leaking information on plaintext.
+
+_Disadvantage_
+
+Receiver must decrypt the message before they can determine if they have received a corrupted cipher text.
+
 #### Encrypt-then-MAC
