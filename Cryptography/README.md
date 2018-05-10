@@ -49,6 +49,17 @@ MACs and ciphers can be combined in one of three ways to both *encrypt* and *aut
 * MAC-then-encrypt
 * encrypt-then-MAC
 
+Three combination differ in the order which _encryption_ is applied and _authentication tag_ is generated. However the choice of a specific MAC or cipher algorithm is unimportant as long as each is secure in its own right, and the MAC and ciper use distinct _keys_.
+
 #### Encrypt-and-MAC
+
+Plain text (p) is encrypted using a key (k1) to generate cipher text (c). A MAC (t) is generated from the plain text using a different key (k2). The cipher text (c) and the tag (t) are transmitted to the recipient. 
+The recipient then, decrypt cipher text (c) using key (k1), and create a MAC using a different key (k2). This generated tag them compared with received tag (t) to verify authenticitry of the message.
+
+If the message or tag are tampered, then decryption will fail.
+
+_Disadvantage_
+
+Even a complicated MAC can still leak information about cipher text.
 #### MAC-then-Encrypt
 #### Encrypt-then-MAC
