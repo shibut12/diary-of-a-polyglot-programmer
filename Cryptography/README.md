@@ -79,3 +79,11 @@ _Disadvantage_
 Receiver must decrypt the message before they can determine if they have received a corrupted cipher text.
 
 #### Encrypt-then-MAC
+
+A cipher text (c) is created from plain text using key (k1), then an authenticated tag(t) is generated using a MAC(k2, c). The tag (t) and the cipher text (c) are then sent to reciver. Receiver computes tag (t2) using MAC(k2, c) andf verifies the t2 equals the tag(t) received. If they are equal, plain text (p) is computed p = D(k1, c), if they are not equal plain text is discarded.
+
+_Advantage_
+
+1. Receiver only need to compute a MAC to detect a corrupt message
+2. Attackers can't sent tag (t) and cipher text(c) to receiver to decrypt unless they have brocken the MAC
+3. Encrypt-then-mac is mroe stronger than Encrypt-and-mac & MAC-then-encrypt.
