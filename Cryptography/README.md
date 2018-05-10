@@ -39,7 +39,16 @@ A mathematical algorithm that maps data of different size to  a bit string of a 
 A cryptographic has function that takes an input and produce a 20byte hash value knows  as message digest
 
 ## Authenticated encryption
+Protects not only message's confidentiality, but also authenticity. Similar to MAC's Authenticated encryption(AE) algorithms produce an _authentication tag_ and _encrypts_ the message. In other words, a single AE algorithm offers the features of both *cipher* and a *MAC*.
+
 ### Authenticated Encryption using MACs
+
+MACs and ciphers can be combined in one of three ways to both *encrypt* and *authenticate* a _plain text_.
+
+* encrypt-and-MAC
+* MAC-then-encrypt
+* encrypt-then-MAC
+
 #### Encrypt-and-MAC
 #### MAC-then-Encrypt
 #### Encrypt-then-MAC
