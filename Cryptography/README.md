@@ -58,6 +58,10 @@ The recipient then, decrypt cipher text (c) using key (k1), and create a MAC usi
 
 If the message or tag are tampered, then decryption will fail.
 
+_Advantage_
+
+MAC and Cipeher text can be created in parallel
+
 _Disadvantage_
 
 Even a complicated MAC can still leak information about cipher text.
