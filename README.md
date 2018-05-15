@@ -53,8 +53,9 @@ A growing collection of notes on following topics
 * Angular Material
 * RxJS
 * Unit Testing
-    * KarmaJS
-    * JasminJS 
+    * Mocha
+    * Chai
+    * SinonJS
 * Integration testing
     * Selenium 
     * PhantomJS
