@@ -53,9 +53,10 @@ A growing collection of notes on following topics
 * Angular Material
 * RxJS
 * Unit Testing
-    * Mocha
-    * Chai
-    * SinonJS
+    * JavaScript / TypeScript
+        * Mocha
+        * Chai
+        * SinonJS
 * Integration testing
     * Selenium 
     * PhantomJS
