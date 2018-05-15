@@ -1,0 +1,15 @@
+{
+  "name": "mocha-test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
