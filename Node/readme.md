@@ -160,3 +160,115 @@ Module {
      'C:\\Program Files\\nodejs\\lib\\node' ] }
 undefined
 ```
+
+### Json and C++ addons
+
+With node require, we can load JSON files and C++ addons. 
+
+```js
+require('something`);
+```
+For this code Node will try to load following fil, if 1 failed Node will load 2 if 2 failed Node will load 3.
+1. Try to load something.js
+2. Try to load something.json ( JSON file )
+3. Try to load something.node (Compiled c++ addon module)
+
+```js
+require.extensions
+// { '.js': [Function], '.json': [Function], '.node': [Function] }
+```
+
+### Wrapping and Cashing objects
+
+Export object can be used to export properties. When exporting modules, we must use `module.export ` syntax.
+
+```js
+exports.id = 1 //this is ok
+exports = {id: 1} //this is not ok
+module.exports = {id:1} // this is ok
+```
+
+By default Node __wrap__ mosuiles in a function, which will isolate the scope that module.
+
+```js
+ require('module').wrapper
+
+// [ '(function (exports, require, module, __filename, __dirname) { ','\n});' ]
+```
+1. _exports_ is a variable reference to `module.exports`. Equal to `let exports = module.exports` at the top of the module.
+
+
+### NPM - Package manager for Node
+
+__YARN__ is another package manager created by facebook.com, which claims it is faster than NPM.
+
+* -i : Install package
+* ls : list packages
+* ll : list detailed list of packages
+* search : search from command line, e.g npm search lint
+* repo : list home page of package
+* prune : cleanup the packages that are installed without saving into package.json E.g npm prune
+
+#### Package.json
+Minimum required info are
+```json
+{
+    "name" : "hello-npm",
+    "version": "1.0.0:"
+}
+```
+
+* npm i -S : Dependency is considered as production dependency. These packages will be listed in dependencies list .eg: `npm i -D request`
+* npm i -D : Dependency is considered as Development dependency. These packages will be listed in devDependencies list.
+* npm i -O : dependency is considered as optional dependency. These packages will be listed in optionalDependencies list.
+
+##### Operators
+
+###### `=`  
+Default operator if no operator is provided.
+
+E.g
+```json
+{
+    "dependencies":{
+        "request": "2.79.0" 
+        // same as "request": ="2.79.0"
+    }
+}
+```
+
+###### `*`  
+Wild character to cover a whole range, it has the same effect as not providing a sem ver section.
+E.g
+```json
+{
+    "dependencies":{
+        "request": "2.79.*" 
+        // same as "request": "2.79"
+    }
+}
+```
+
+###### `~`  
+To match minor version.
+E.g
+```json
+{
+    "dependencies":{
+        "request": ~"2.79.1" 
+        // same as "request": "2.79.x" where x >=1
+    }
+}
+```
+
+###### `^`  
+Work well with packages that does not change the left most sem ver array.
+E.g
+```json
+{
+    "dependencies":{
+        "request": ^"2.79.1" 
+        // same as "request": "2.x.1" where x >=79
+    }
+}
+```
