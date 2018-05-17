@@ -327,6 +327,8 @@ console.log(CAT.hasOwnProperty('age')); //resolve to false
 
 #### Changing a function's prototype
 
+When objects are created, their `__proto__` is pointed to a `prototype` in memory. When the `prototype` object of the function is modified after creating objects, the new prototype is pointed to a __new prototype__ object in memory. The existing objects will continue to point to the __prototypes__ in memory. In short prototype is like pointers.
+
 ```js
 function Cat(name, color){
     this.name = name;
@@ -340,5 +342,30 @@ var CAT = new Cat('CAT', 'Brown');
 console.log(CAT.age); //Resolve to 4
 console.log(lucy.age); // Resolve to 4
 
+Cat.prototype = {age: 5};
 
+var jack = new Cat('jack', 'Black');
+
+console.log(CAT.age); //Resolve to 4
+console.log(lucy.age); // Resolve to 4
+console.log(Cat.prototype.age); // Resolve to 5
+console.log(jack.age); // Resolve to 5
+```
+
+#### Multiple levels of Inheritance
+
+It is possible to walk up the prototype chain to view parent object's `prototype`, but eventually a null will be returned. It is because, in JavaScript every object is inherited from `Object` an `Object` __does not have a prototype__.
+
+```js
+function Cat(name, color){
+    this.name = name;
+    this.color = color;
+}
+Cat.prototype.age = 4; // Updated Cat's property by adding age
+
+var lucy = new Cat('Lucy', 'White');
+
+JSON.stringify(lucy.__proto__); // resolve to {"age":4}
+JSON.stringify(lucy.__proto__.__proto__); // resolve to {}
+JSON.stringify(lucy.__proto__.__proto__.__proto__); // resolve to null
 ```
