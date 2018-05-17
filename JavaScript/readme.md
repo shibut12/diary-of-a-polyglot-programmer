@@ -132,9 +132,9 @@ console.log(Object.getOwnPropertyDescriptor(cat, 'name'));
 
 ##### Writable property
 
-It allows to change the name of property from its initial value.
+It allows to change the name of property from its initial value. To make a property non-writable, use `Object.defineProperty`. 
 
-To make a property non-writable, use `Object.defineProperty`.
+Only `'use strict'` mode will generate error if an attempt to change name property is failed.
 
 ```js
 Object.defineProperty(object-name, 'name', {writable: false});
@@ -160,4 +160,45 @@ console.log(Object.getOwnPropertyDescriptor(cat, 'name'));
 
 //Generates following json
 //{value: "floof", writable: false, enumerable: true, configurable: true}
+```
+
+##### Object.freeze
+
+Even though `Object.defineProperty` makes a property non-writable, if the property is pointing to another object, it will still allow user to change the value. To disable this, you need to `freeze` the field.
+
+```js
+'use strict'
+
+var cat = {
+    name: {first: 'Fluffy', last: 'Labouf'},
+    color: 'white'
+}
+
+Object.defineProperty(cat, 'name', {writable: false});
+Object.freeze(cat.name);
+cat.name = 'Fluffy'; //will fail
+cat; // will print {"name":{"first":"Fluffy","last":"Labouf"},"color":"white"}
+```
+
+#### Enumerable operator
+
+The enumerable property is depends on `enumerable` property, if it is `false`, it will not JSON serialize the object leaf elements of the object.
+
+```js
+var cat = {
+    name: {first: 'Fluffy', last: 'Labouf'},
+    color: 'white'
+}
+
+//will print name, color
+for(var propertyName in cat){
+    console.log(propertyName +  ':' + cat[propertyName]);
+}
+
+console.log(Object.keys(cat)); // will display ["name","color"]
+
+JSON.stringify(cat) // Will resolve to {"name":{"first":"Fluffy","last":"Labouf"},"color":"white"}
+
+Object.defineProperty(cat, 'name', {enumerable: false});
+JSON.stringify(cat) // Will resolve to {"color":"white"}
 ```
