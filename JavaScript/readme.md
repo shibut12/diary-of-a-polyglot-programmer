@@ -202,3 +202,43 @@ JSON.stringify(cat) // Will resolve to {"name":{"first":"Fluffy","last":"Labouf"
 Object.defineProperty(cat, 'name', {enumerable: false});
 JSON.stringify(cat) // Will resolve to {"color":"white"}
 ```
+
+#### Configurable operator
+
+Will lock down the property, the value cannot be changed, property cannot be deleted. You can change the property to writable.
+
+```js
+var cat = {
+    name: {first: 'Fluffy', last: 'Labouf'},
+    color: 'white'
+}
+
+Object.defineProperty(cat, 'name', {configurable: false});
+Object.defineProperty(cat, 'name', {enumerable: false}); // Will generate an error if 'use strict' is enabled.
+delete(cat.name); //will generate an error as well.
+```
+
+#### Getters and Setters
+
+```js
+var cat = {
+    name: {first: 'Fluffy', last: 'Labouf'},
+    color: 'white'
+}
+
+Object.defineProperty(cat, 'fullName', {
+    get: function(){
+        return this.name.first + ' ' + this.name.last
+    },
+    set: function(value){
+        var nameParts = value.split(' ');
+        this.name.first = nameParts[0];
+        this.name.last = nameParts[1];
+    }
+});
+
+console.log(cat.fullName); // Will resolve to Fluffy Labouf
+
+cat.fullName = 'Muffin Top' // set first name to Muffin and last name to Top
+console.log(cat.fullName); // Will resolve to Muffin Top
+```
