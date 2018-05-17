@@ -85,6 +85,8 @@ var lucy = new Cat('Lucy', 'White');
 lucy.speak(); //Resolves to meow
 ```
 
+---
+
 ### Objects, properties and Property attributes
 
 #### dot `.` notation
@@ -241,4 +243,102 @@ console.log(cat.fullName); // Will resolve to Fluffy Labouf
 
 cat.fullName = 'Muffin Top' // set first name to Muffin and last name to Top
 console.log(cat.fullName); // Will resolve to Muffin Top
+```
+
+---
+
+### Prototypes and inheritance
+
+Prototype is an object that exists in every function in JavaScript.
+
+```js
+var arr = ['red', 'blue', 'green'];
+console.log(arr.last); // undefined error
+
+
+Object.defineProperty(arr, 'last', {get: function(){
+    return this[this.length - 1];
+}});
+
+console.log(arr.last); // Resolve to Green
+
+var arr1 = ['red', 'blue', 'green', 'yellow'];
+console.log(arr1.last); // undefined error
+
+Object.defineProperty(Array.prototype, 'last', {get: function(){
+    return this[this.length - 1];
+}});
+console.log(arr1.last); // Resolve to yellow
+```
+
+The Prototype property is an empty object. __Objects__ do not have property, but they have _proto_ property. A prototype is not a class, it is an object. When a function is created, an empty prototype object is created and attached to it behind the scene. If this function then used as a constructor function with a `new` keyword, the object that is created has a `__proto__` property that is pointed to the same function that is pointed to the __function's prototype__.
+
+__A function's prototype__ is the object __instance__ that will become the prototype for all objects created using this function as a constructor.
+
+__An object's prototype__ is the object __instance__ from which the object is inherited.
+
+E.g
+
+```js
+function Cat(name, color){
+    this.name = name;
+    this.color = color;
+}
+
+var lucy = new Cat('Lucy', 'White');
+
+JSON.stringify(Cat.prototype); // will resolve to {}
+JSON.stringify(lucy.__proto__); // will resolve to {}
+Cat.prototype == lucy.__proto__; // Will resolve to true
+
+Cat.prototype.age = 3; // Updated Cat's property by adding age
+JSON.stringify(Cat.prototype); // will resolve to {"age":3}
+JSON.stringify(lucy.__proto__); // will resolve to {"age":3}
+Cat.prototype == lucy.__proto__; // Will resolve to true
+```
+
+#### Instance vs Prototype properties
+
+If the value of a prototype is directly change on the object, then the new value is added as a property of the object and the value in prototype is unchanged. The `hasOwnProperty` function allows to check if the given property is defined on the object or on the prototype.
+
+
+When code request for a specific property, JavaScript first lookup the property in Object, if not found it will lookup in `__proto__ ` or `prototype`.
+
+```js
+function Cat(name, color){
+    this.name = name;
+    this.color = color;
+}
+Cat.prototype.age = 3; // Updated Cat's property by adding age
+
+var lucy = new Cat('Lucy', 'White');
+var CAT = new Cat('CAT', 'Brown');
+
+console.log(lucy.age); // resolve to 3
+console.log(CAT.age); // resolve to 3
+
+lucy.age = 1;
+console.log(lucy.age); // resolve to 1
+console.log(lucy.__proto__.age); // resolve to 3
+console.log(CAT.age); // resolve to 3
+console.log(lucy.hasOwnProperty('age')); //resolve to true
+console.log(CAT.hasOwnProperty('age')); //resolve to false
+```
+
+#### Changing a function's prototype
+
+```js
+function Cat(name, color){
+    this.name = name;
+    this.color = color;
+}
+Cat.prototype.age = 4; // Updated Cat's property by adding age
+
+var lucy = new Cat('Lucy', 'White');
+var CAT = new Cat('CAT', 'Brown');
+
+console.log(CAT.age); //Resolve to 4
+console.log(lucy.age); // Resolve to 4
+
+
 ```
