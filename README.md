@@ -4,32 +4,41 @@ A growing collection of notes on following topics
 ** All the documentation included in this repository are colleted from internet. It is basically an electronic version of the notes that I used to collect in many notebooks. I dont intend to share any copyright protected materials here. Let me know if you come across any copy right protected material in my notes. I will take appropriate action.
 
 ## IOT
+
 * MQTT
     * Mosquitto MQTT
+
 ## Fundamentals
+
 * Algorithms
 * Architecture
 * Cryptography
 * Design Patterns
 * SOLID Principles
 * Object oriented Programming
-* Prototypal programming
+* Prototype oriented programming
 * OData
+
 ## Platform
+
 * Linux
 * Windows
-* Azure 
+* Azure
 * Heroku
-## Source code verison control
+
+## Source code version control
+
 * Git
 * TFS
     * TFS Power tools (tfpt)
+
 ## Server side
-* ASP.NET 
-    * MVC
-    * SignalR 
-    * WCF
+
+* ASP.NET
     * Web API
+    * MVC
+    * SignalR
+    * WCF
     * Web forms
 * ASP.NET Core
     * MVC
@@ -49,7 +58,9 @@ A growing collection of notes on following topics
     * Entity Framework Core
 * SQL Server
 * NodeJS 
+
 ## Client Side
+
 * Angular
 * Angular Material
 * RxJS
@@ -59,7 +70,7 @@ A growing collection of notes on following topics
         * Chai
         * SinonJS
 * Integration testing
-    * Selenium 
+    * Selenium
     * PhantomJS
     * Headless Chrome
     * Puppeteer
