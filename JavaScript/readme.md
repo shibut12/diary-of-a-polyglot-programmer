@@ -89,7 +89,8 @@ lucy.speak(); //Resolves to meow
 
 #### dot `.` notation
 
-Allows to access named property from an object
+Allows to create, change or access named property from an object.
+
 ```js
 var cat = {
     name: 'Fluffy',
@@ -98,6 +99,7 @@ var cat = {
 
 console.log(cat.name); // Resolve to Fluffy
 ```
+
 #### Bracket notation []
 
 Allows to create and access named properties from an object. It is similar to dot `.` notation. The use case for this notation is you can create properties with name enter by user or a json payload.
@@ -110,4 +112,52 @@ var cat = {
 
 cat['eye-color'] = 'blue';
 console.log(cat['eye-color']); // Resolve to blue
+```
+
+#### OwnPropertyDescriptor
+
+Every property has a property descriptor.
+
+```js
+var cat = {
+    name: 'Fluffy',
+    color: 'White'
+}
+
+console.log(Object.getOwnPropertyDescriptor(cat, 'name'));
+
+//Generates following json
+//{"value":"Fluffy","writable":true,"enumerable":true,"configurable":true}
+```
+
+##### Writable property
+
+It allows to change the name of property from its initial value.
+
+To make a property non-writable, use `Object.defineProperty`.
+
+```js
+Object.defineProperty(object-name, 'name', {writable: false});
+```
+
+```js
+var cat = {
+    name: 'Fluffy',
+    color: 'White'
+}
+
+cat.name = 'floof'; // will update the name property from Fluffy to floof
+
+cat; // will print {name: "floof", color: "White"}
+
+Object.defineProperty(cat, 'name', {writable: false}); // sets the name property of cat object non writable
+
+cat.name = 'Fluffy';  // will not change the name property
+
+cat; // will print {name: "floof", color: "White"}
+
+console.log(Object.getOwnPropertyDescriptor(cat, 'name'));
+
+//Generates following json
+//{value: "floof", writable: false, enumerable: true, configurable: true}
 ```
