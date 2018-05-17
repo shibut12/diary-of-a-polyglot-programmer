@@ -28,3 +28,54 @@ There are no _explicit classes_ in prototype-based languages. Objects inherit di
 1. Object creation
 2. Cloning through an existing object
 
+### Examples
+
+#### Create
+
+```js
+//Object creation using the literal
+//Object notation {}
+
+//Object #1
+var foo = {name: 'foo', one: 1, two: 2};
+
+//Object #2
+var bar = {two: 'two', three: 3};
+
+console.log(bat.three);// Resolve to 3
+
+//Object.setPrototypeOf() is introduced in ECMAScript2015
+
+bar = Object.create(foo); //bar is an instance of foo
+
+// Verification.
+console.log(bar.one);  // Resolve to 1
+console.log(bar.two);  // Resolve to 2
+console.log(bat.three);// undefined error
+console.log(bar.name); // Resolve to foo
+```
+
+#### Cloning
+
+```js
+//Example of true prototypical inheritance style
+
+//Object creation using the literal
+//Object notation {}
+
+//Object #1
+var foo = {name: 'foo', one: 1, two: 2};
+
+//Object #2
+var bar = {two: 'two', three: 3};
+
+//Object.setPrototypeOf() is introduced in ECMAScript2015
+
+Object.setPrototypeOf(bar, foo); //foo is now prototype of bar
+
+// Verification.
+console.log(bar.one);  // Resolve to 1
+console.log(bar.two);  // Resolve to two instead of 2
+console.log(bat.three);// Resolve to 3
+console.log(bar.name); // Resolve to foo
+```
