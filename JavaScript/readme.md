@@ -369,3 +369,80 @@ JSON.stringify(lucy.__proto__); // resolve to {"age":4}
 JSON.stringify(lucy.__proto__.__proto__); // resolve to {}
 JSON.stringify(lucy.__proto__.__proto__.__proto__); // resolve to null
 ```
+
+#### Creating own chains of Inheritance
+
+Following are very important 3 lines of code when creating own prototype chains.
+
+1. `Animal.call(this, 'meow');` - Ensure that when a object is called it calls the parent's constructor
+2. `Cat.prototype = Object.create(Animal.prototype)';` - Set the Child's prototype to parent's prototype.
+3. `Cat.prototype.constructor = Cat;` - Set the default constructor of child to child itself, it ensure that chile is not set ans an object of parent.
+
+```js
+function Animal(){}
+Animal.prototype.speak = function(){
+    console.log('grunt');
+}
+
+function Cat(name, color){
+    this.name = name;
+    this.color = color;
+}
+
+Cat.prototype = Object.create(Animal.prototype); // Object.create will not call the Animal constructor, it just set the object
+
+var lucy = new Cat('Lucy', 'White');
+lucy.speak(); // Resolve to grunt
+```
+
+To ensure the parent object is called follow below code. The `.call(this);` will ensure that any validation that Parent object may have is called.
+
+```js
+function Animal(voice){
+    this.voice = voice;
+}
+Animal.prototype.speak = function(){
+    console.log(this.voice);
+}
+
+function Cat(name, color){
+    Animal.call(this, 'meow');
+    this.name = name;
+    this.color = color;
+}
+
+Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat;
+
+var lucy = new Cat('Lucy', 'White');
+lucy.speak(); // Resolve to Meow
+
+lucy instanceof Cat; // resolve to true
+lucy instanceof Animal; // resolve to false
+```
+
+#### Creating prototypes with Class like syntax
+
+Properties of `Classes` are nbot enumerable, you cannot walk up the inheritance chain when created using Class.
+
+```js
+class Animal {
+    constructor(voice){
+        this.voice = voice || 'grunt';
+    }
+    speak(){
+        console.log(this.voice);
+    }
+}
+class Cat extends Animal{
+    constructor(name, color){
+        super('Meow');
+
+        this.name = name;
+        this.color = color;
+    }
+}
+
+var lucy = new Cat('Lucy', 'White');
+lucy.speak(); //Resolves to Meow
+```
