@@ -84,3 +84,30 @@ class Cat{
 var lucy = new Cat('Lucy', 'White');
 lucy.speak(); //Resolves to meow
 ```
+
+### Objects, properties and Property attributes
+
+#### dot `.` notation
+
+Allows to access named property from an object
+```js
+var cat = {
+    name: 'Fluffy',
+    color: 'White'
+}
+
+console.log(cat.name); // Resolve to Fluffy
+```
+#### Bracket notation []
+
+Allows to create and access named properties from an object. It is similar to dot `.` notation. The use case for this notation is you can create properties with name enter by user or a json payload.
+
+```js
+var cat = {
+    name: 'Fluffy',
+    color: 'White'
+}
+
+cat['eye-color'] = 'blue';
+console.log(cat['eye-color']); // Resolve to blue
+```
