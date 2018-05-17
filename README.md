@@ -63,6 +63,7 @@ A growing collection of notes on following topics
 
 * Angular
 * Angular Material
+* Javascript
 * RxJS
 * Unit Testing
     * JavaScript / TypeScript
