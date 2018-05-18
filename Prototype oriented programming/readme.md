@@ -30,8 +30,6 @@ There are no _explicit classes_ in prototype-based languages. Objects inherit di
 
 ### Examples
 
-
-
 #### Cloning
 
 ```js

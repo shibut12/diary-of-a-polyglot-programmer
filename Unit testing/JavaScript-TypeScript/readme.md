@@ -71,7 +71,7 @@ __Sinon__ is a JavaScript library which allows to isolate the code that we are t
 
 ### Spies
 
-`Spy` allows to create spy on the implementation of a dependency. `Spy` is really useful in the use cases like verifying a specific function is called. The disadvantage of spy is that it will call the real underlying implementation. __SPY__ are not true mocks.
+`Spys` are a way to watch singly function. `Spy` allows to create spy on the implementation of a dependency. `Spy` is really useful in the use cases like verifying a specific function is called. The disadvantage of spy is that it will call the real underlying implementation. __SPY__ are not true mocks.
 
 #### Creating a simple SPY
 
@@ -116,6 +116,31 @@ it('should call the callback even if it\'s a method of an object', function(){
 ```
 
 ### Stubs
+
+`Stubs` are a way to watch an entire object. When a stub is being created, it walks through  each an every property of the given object and replace it with a spy. Because of this when a spy is passed in an argument, it never calls the underlying implementation of the object. Stubs can be used to setup values to test edge scenarios without impacting the real implementation.
+
+#### Simple stubs
+
+```js
+it('Should call a stubbed method', function(){
+    var stub = sinon.stub(schedule);
+    student.dropClass(1, stub.dropClass);
+
+    stub.dropClass.called.should.be.true;
+});
+```
+
+#### Setup values using stub
+
+```js
+it('Should return true when the class is not full', function(){
+    var stub = sinon.stub(schedule);
+    stub.classIsFull.returns(false);
+
+    var returnVal = student.addClass(stub);
+    returnVal.should.to.be.true;
+});
+```
 
 ### Mocks
 
