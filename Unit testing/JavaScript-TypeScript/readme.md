@@ -71,6 +71,50 @@ __Sinon__ is a JavaScript library which allows to isolate the code that we are t
 
 ### Spies
 
+`Spy` allows to create spy on the implementation of a dependency. `Spy` is really useful in the use cases like verifying a specific function is called. The disadvantage of spy is that it will call the real underlying implementation. __SPY__ are not true mocks.
+
+#### Creating a simple SPY
+
+```js
+var spy = sinon.spy(); // Create a spy
+//Act
+SystemUnderTest.SomeFunction(spy);
+//Assert
+spy.called.should.be.true;
+```
+
+#### Creating spy of a specific function
+
+```js
+function dependency(){
+    console.log('Dependency was called');
+};
+
+var spy = sinon.spy(onClassDropped); //Creates a spy
+
+//Act
+student.dropClass(1, spy);
+
+//Assert
+spy.called.should.be.true;
+```
+
+#### Creating a spy of an Object
+
+```js
+schedule = {
+    dropClass: function(){
+        console.log('class dropped');
+    }
+}
+
+it('should call the callback even if it\'s a method of an object', function(){
+    sinon.spy(schedule, 'dropClass');
+    student.dropClass(1, schedule);
+    schedule.dropClass.called.should.be.true;
+});
+```
+
 ### Stubs
 
 ### Mocks
