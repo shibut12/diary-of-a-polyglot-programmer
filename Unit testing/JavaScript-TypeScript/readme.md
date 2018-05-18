@@ -65,7 +65,7 @@ Chai is a BDD/TDD assertion library for node and JavaScript. Mocha is the prefer
 
 ## SinonJS
 
-Sinon `v5.0.7` is written in _ES5.1` and requires no transpiler aor polyfills on Node.js LTS versions.
+__Sinon__ is a JavaScript library which allows to isolate the code that we are testing. Sinon `v5.0.7` is written in _ES5.1` and requires no transpiler or polyfills on Node.js LTS versions.
 
 ### Fakes
 
