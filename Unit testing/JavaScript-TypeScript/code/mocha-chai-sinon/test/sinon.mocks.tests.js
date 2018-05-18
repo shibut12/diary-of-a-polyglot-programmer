@@ -4,9 +4,9 @@ var chai = require('chai'),
     sinon = require('sinon'),
     expect = chai.expect;
 
-    chai.should();
+chai.should();
 
-describe('Unit tests for Sinon stubs', function(){
+describe('Unit tests for Sinon Mocks', function(){
     var student, schedule;
     beforeEach(function(){
         student = {
@@ -41,17 +41,12 @@ describe('Unit tests for Sinon stubs', function(){
         }
     });
 
-    it('Should call a stubbed method', function(){
-        var stub = sinon.stub(schedule);
-        student.dropClass(1, stub.dropClass);
-        
-        stub.dropClass.called.should.be.true;
-    });
-    it('Should return true when the class is not full', function(){
-        var stub = sinon.stub(schedule);
-        stub.classIsFull.returns(false);
+    it('mock schedule', function(){
+        var mock = sinon.mock(schedule);
+        var expectation = mock.expects('classIsFull').once();
 
-        var returnVal = student.addClass(stub);
-        returnVal.should.to.be.true;
+        student.addClass(schedule);
+        
+        expectation.verify();
     });
 });
