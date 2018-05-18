@@ -1,11 +1,14 @@
 {
-  "name": "mocha-test-project",
+  "name": "mocha-chai-test-project",
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
-  "dependencies": {},
+  "dependencies": {
+    
+  },
   "devDependencies": {
-    "mocha": "^5.1.1"
+    "mocha": "^5.1.1",
+    "chai": "^4.1.2"
   },
   "scripts": {
     "test": "mocha"
