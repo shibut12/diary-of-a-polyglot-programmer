@@ -50,6 +50,7 @@ A growing collection of notes on following topics
     * XUnit
     * MOQ
     * tSQLt
+    * JUnit
 * Net
     * ADO.NET
     * Entity Framework
@@ -58,6 +59,7 @@ A growing collection of notes on following topics
     * Entity Framework Core
 * SQL Server
 * NodeJS 
+* Java
 
 ## Client Side
 
