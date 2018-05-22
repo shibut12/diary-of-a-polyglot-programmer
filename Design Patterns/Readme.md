@@ -1,8 +1,25 @@
+# Pattern
+
+A _Pattern_ is a way of doing something, a way of pursuing an intent, a technique.
+
 # Design Patterns
+
+A _design pattern_ is a way to pursue an intent, that uses classes and their methods in an object-oriented language.
 
 Are solutions to software design problems that you find again and again in real-world application development. Patterns are about reusable designs and interactions.
 
 The 23 Gang Of Four (GoF) patterns are generally considered the foundation for all other patterns. They are categorized as __Creational__, __Structural__ and __Behavioral__.
+
+## Classification based on intent
+
+| Intnet            |  Patterns                                                                 |
+|------------------:| :-----------------------------------------------------------------------: |
+| Interfaces        | Adapter, Facade, Composite, Bridge                                        |
+| Responsibility    | Singleton, Observer, Mediator, Proxy, Chain of responsibility, flyweight  |
+| Construction      | Builder, Factory method, Abstract Factory, Prototype, Memento             |
+| Operations        | Template method, State, Strategy, Command, Intrepreter                    |
+| Extensions        | Decorator, Iterator, Visitor                                              |                       
+
 
 ## Creational Patterns
 
