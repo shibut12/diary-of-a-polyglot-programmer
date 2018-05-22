@@ -5,6 +5,7 @@
 * Mocha - A JavaScript test framework. [https://mochajs.org/](https://mochajs.org/)
 * ChaiJS - An Assertion library. [http://www.chaijs.com/](http://www.chaijs.com/)
 * SinonJS - Standalone test spies, stubs and mocks for JavaScript. [http://sinonjs.org](http://sinonjs.org)
+* IstanbulJS - A library to capture code coverage. [https://istanbul.js.org/](https://istanbul.js.org/)
 
 ## MochaJS
 
@@ -541,3 +542,72 @@ describe('Unit tests for Sinon Mocks', function(){
 ### Sandboxes
 
 ### Utils
+
+## Istanbul
+
+Istanbul is a library that capture the code coverage. Istanbul works really well with Mocha.
+
+```bash
+npm install --save-dev nyc
+```
+
+Update `test` command in package.json file.
+
+```js
+{
+  "scripts": {
+    "test": "nyc mocha"
+  }
+}
+```
+
+Run tests
+
+```bash
+npm test
+```
+
+Following is the output generated for test project included in this library.
+
+```bash
+> nyc mocha
+
+  Tests for index.js
+    √ GetStudent function should exist
+
+  1 passing (41ms)
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |     62.5 |      100 |    33.33 |     62.5 |                   |
+ index.js |     62.5 |      100 |    33.33 |     62.5 |           6,12,13 |
+----------|----------|----------|----------|----------|-------------------|
+```
+
+### Using alternative providers
+
+__Reporters__ alter the way the code coverage is being reported. Reporters can be utilized generate reports in a particular format. By default `nyc` uses Istanbul's text reporter.
+
+__Syntax__
+
+```json
+{
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha"
+  }
+}
+```
+
+1. Clover - A file `clover.xml` is generated at `clover` directory.
+2. cobertura - Report is generated in `coverage/cobertura-coverage.xml` file
+3. html - Report is generated in html format and displayed in the console
+4. json-summary - Report is generated in `coverage/coverage-summary.json`
+5. json - Report is generated in `coverage/coverage-final.json`
+6. lcov - Report is generated in `coverage/lcov.info` and an `html` report is generated to display in browser
+7. lcovonly - Report is generated in `coverage/lcov.info`
+8. none - No output
+9. teamcity - Report is generated in teamcity compatible format and displayed in console
+10. text-lcov - A text report is generated and displayed on console
+11. text-summary - A text summary report is displayed on console
+12. text - same as `text-summary` but a includes per page report is generated

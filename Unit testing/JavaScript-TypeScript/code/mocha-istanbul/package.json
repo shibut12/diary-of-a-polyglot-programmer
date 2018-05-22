@@ -1,0 +1,16 @@
+{
+  "name": "mocha-istanbul",
+  "version": "1.0.0",
+  "description": "Test project that run tests and capture code coverage",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=teamcity --reporter=text mocha"
+  },
+  "author": "Shibu Thannikkunnath",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^11.8.0"
+  }
+}
