@@ -215,6 +215,38 @@ describe('Test add function for a set of values', function(){
 });
 ```
 
+### Timeouts
+
+`timeout(n)` can be used to apply timeout for a entire test suite or a specific test. This can be used on __hooks_ as well.
+
+```js
+describe('a suite of tests', function() {
+  this.timeout(500);
+
+  it('should take less than 500ms', function(done){
+    setTimeout(done, 300);
+  });
+
+  it('should take less than 500ms as well', function(done){
+    setTimeout(done, 250);
+  });
+})
+```
+
+### Reporters
+
+Reporters display test report to screen. Reporters can be specified by passing as command line argument while invoking `mocha` to start tests.
+
+Example
+
+```bash
+    mocha test/ --reporter dot
+```
+
+#### SPEC
+
+Is the default reporter for _MOcha_, The spec reporter outputs a hierarchical view nested just as the test cases are.
+
 ## ChaiJS
 
 Chai is a BDD/TDD assertion library for node and JavaScript. Mocha is the preferred TestRunner for ChaiJS.
