@@ -159,6 +159,32 @@ describe('Skipping tests', function(){
 });
 ```
 
+### Retry tests
+
+`.retries(n)` can be used to retry failed tests up to __n__ times. This feature is designed to handle _end-to-end_ tests, where the resources cannot be mocked/stubbed.
+
+```js
+describe('Retries', function(){
+    // Retry all tests in this suite up to 4 times
+    this.retries(4);
+
+    beforeEach(function(){
+        browser.get('https://www.codewithdot.net.com');
+    });
+
+    it('Should succeed on the 3rd try', function(){
+        //Specify this test to only retry up to 2 times
+        this.retries(2);
+
+        expect($('.foo').isDisplayed()).eventually.to.be.true;
+    });
+});
+```
+
+### Run same test for a set of values
+
+
+
 ## ChaiJS
 
 Chai is a BDD/TDD assertion library for node and JavaScript. Mocha is the preferred TestRunner for ChaiJS.
