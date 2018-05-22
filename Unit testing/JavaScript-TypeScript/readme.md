@@ -49,6 +49,101 @@ Run tests with MochaJS
 npm test
 ```
 
+### Hooks
+
+Hooks are used to set up pre-conditions and cleanup code after tests. ANy hook can have an optional description as well.
+
+```js
+describe('Hooks', function(){
+    describe('Hooks with no description', function(){
+        before(function(){
+            // Runs before all tests in this block
+        });
+
+        after(function(){
+            // Runs after all tests in the block
+        });
+
+        beforeEach(function(){
+            // Runs before every test in the block
+        });
+
+        afterEach(function(){
+            // Runs after every tests in the block
+        });
+
+        it('unit test 1', function(){
+            true.should.be.true;
+        });
+
+        // other tests
+    });
+    describe('Hooks with description', function(){
+
+        before('Description of before hook', function(){
+            // Runs before all tests in this block
+        });
+
+        after('Description of after hook', function(){
+            // Runs after all tests in the block
+        });
+
+        beforeEach('Description of beforeEach hook', function(){
+            // Runs before every test in the block
+        });
+
+        afterEach('Description of afterEach hook', function(){
+            // Runs after every tests in the block
+        });
+
+        it('unit test 1', function(){
+            true.should.be.true;
+        });
+
+        // other tests
+    });
+});
+describe('Hooks', function(){
+    before(function(){
+        // Runs before all tests in this block
+    });
+
+    before('Description of before hook', function(){
+        // Runs before all tests in this block
+    });
+
+    after(function(){
+        // Runs after all tests in the block
+    });
+
+    after('Description of after hook', function(){
+        // Runs after all tests in the block
+    });
+
+    beforeEach(function(){
+        // Runs before every test in the block
+    });
+
+    beforeEach('Description of beforeEach hook', function(){
+        // Runs before every test in the block
+    });
+
+    afterEach(function(){
+        // Runs after every tests in the block
+    });
+
+    afterEach('Description of afterEach hook', function(){
+        // Runs after every tests in the block
+    });
+
+    it('unit test 1', function(){
+        true.should.be.true;
+    });
+
+    // other tests
+});
+```
+
 ## ChaiJS
 
 Chai is a BDD/TDD assertion library for node and JavaScript. Mocha is the preferred TestRunner for ChaiJS.
