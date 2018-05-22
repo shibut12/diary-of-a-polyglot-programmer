@@ -144,6 +144,21 @@ describe('Hooks', function(){
 });
 ```
 
+### Inclusive tests
+
+The `.skip()` can be used to skip a test or an entire test suite, anything that is _skipped_ will be marked as __pending__.
+
+```js
+describe('Skipping tests', function(){
+    it.skip('test is not ready yet', function(){
+        true.should.be.true;
+    });
+    it('true should be true', function(){
+        true.should.be.true;
+    });
+});
+```
+
 ## ChaiJS
 
 Chai is a BDD/TDD assertion library for node and JavaScript. Mocha is the preferred TestRunner for ChaiJS.
