@@ -245,7 +245,134 @@ Example
 
 #### SPEC
 
-Is the default reporter for _MOcha_, The spec reporter outputs a hierarchical view nested just as the test cases are.
+Is the default reporter for _Mocha_, The spec reporter outputs a hierarchical view nested just as the test cases are.
+
+### Dot Matrix
+
+Represents test time in the test took to run in dot `.`, successful tests in a green comma `,` and failed tests in red exclamation `!` mark.
+
+```bash
+> mocha test/ --reporter dot
+
+
+
+  ,.......,,
+
+  7 passing (15ms)
+  3 pending
+
+```
+
+### NYAN
+
+A colorful test reporter.
+
+```bash
+> mocha test/ --reporter nyan
+
+ 7   -_-_-_-_-_-_,------,
+ 0   -_-_-_-_-_-_|   /\_/\
+ 3   -_-_-_-_-_-^|__( o .o)
+     -_-_-_-_-_-  ""  ""
+
+  7 passing (67ms)
+  3 pending
+```
+
+#### TAP
+
+Generates report for _TAP ( Test anything protocol)_ [link](https://en.wikipedia.org/wiki/Test_Anything_Protocol).
+
+```bash
+> mocha test/ --reporter TAP
+
+1..10
+ok 1 Inclusive tests This test is not ready yet # SKIP -
+ok 2 Inclusive tests True should be true
+ok 3 Test add function for a set of values Add function should return 2 when passed 1 and 1
+ok 4 Test add function for a set of values Add function should return 4 when passed 2 and 2
+ok 5 Test add function for a set of values Add function should return 1000 when passed 700 and 300
+ok 6 Unit tests Should return true when number is even
+ok 7 Unit tests Should return false when number is odd
+ok 8 add without setup/teardown Should be ten when adding 5 to 5
+ok 9 add without setup/teardown Should be twelve when adding 7 & 5 # SKIP -
+ok 10 add without setup/teardown Should be thirteen when adding 8 & 5 # SKIP -
+# tests 7
+# pass 7
+# fail 0
+```
+
+#### Landing a.k.a Landing strip
+
+Simulate a plane landing strip in unicode.
+
+```bash
+> mocha test/ --reporter landing
+
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅✈
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  7 passing (119ms)
+  3 pending
+```
+
+#### List
+
+Displays report in a list
+
+```bash
+mocha test/ --reporter list
+```
+
+#### Progress
+
+Displays report in a progress bar
+
+```bash
+mocha test/ --reporter progress
+```
+
+#### JSON
+
+Displays report in a JSON
+
+```bash
+mocha test/ --reporter json
+```
+
+#### MIN
+
+Displays minimal summary of the tests.
+
+```bash
+mocha test/ --reporter min
+```
+
+#### DOC
+
+Displays an HTML doc for test report.
+
+```bash
+mocha test/ --reporter doc
+```
+
+#### xunit
+
+Displays a xunit compatible xml report for test report.
+
+```bash
+mocha test/ --reporter xunit
+```
+
+#### markdown
+
+Displays test report in markdown
+
+```bash
+mocha test/ --reporter markdown
+```
 
 ## ChaiJS
 
