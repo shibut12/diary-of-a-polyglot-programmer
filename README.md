@@ -58,7 +58,7 @@ A growing collection of notes on following topics
 * Net Core
     * Entity Framework Core
 * SQL Server
-* NodeJS 
+* NodeJS
 * Java
 
 ## Client Side
@@ -72,6 +72,7 @@ A growing collection of notes on following topics
         * Mocha
         * Chai
         * SinonJS
+        * Istanbul
 * Integration testing
     * Selenium
     * PhantomJS
