@@ -15,7 +15,7 @@ The 23 Gang Of Four (GoF) patterns are generally considered the foundation for a
 | Intnet            |  Patterns                                                                 |
 |------------------:| :-----------------------------------------------------------------------: |
 | Interfaces        | Adapter, Facade, Composite, Bridge                                        |
-| Responsibility    | Singleton, Observer, Mediator, Proxy, Chain of responsibility, flyweight  |
+| Responsibility    | Singleton, Observer, Mediator, Proxy, Chain of responsibility, Flyweight  |
 | Construction      | Builder, Factory method, Abstract Factory, Prototype, Memento             |
 | Operations        | Template method, State, Strategy, Command, Intrepreter                    |
 | Extensions        | Decorator, Iterator, Visitor                                              |                       
