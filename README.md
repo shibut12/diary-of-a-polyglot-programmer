@@ -1,4 +1,5 @@
-# Notes
+# Diary of a polyglot programmer
+
 A growing collection of notes on following topics
 
 ** All the documentation included in this repository are colleted from internet. It is basically an electronic version of the notes that I used to collect in many notebooks. I dont intend to share any copyright protected materials here. Let me know if you come across any copy right protected material in my notes. I will take appropriate action.
@@ -6,7 +7,7 @@ A growing collection of notes on following topics
 ## IOT
 
 * MQTT
-    * Mosquitto MQTT
+  * Mosquitto MQTT
 
 ## Fundamentals
 
@@ -31,33 +32,34 @@ A growing collection of notes on following topics
 
 * Git
 * TFS
-    * TFS Power tools (tfpt)
+  * TFS Power tools (tfpt)
 
 ## Server side
+
 * C++
 * ASP.NET
-    * Web API
-    * MVC
-    * SignalR
-    * WCF
-    * Web forms
+  * Web API
+  * MVC
+  * SignalR
+  * WCF
+  * Web forms
 * ASP.NET Core
-    * MVC
-    * SignalR Core
+  * MVC
+  * SignalR Core
 * CSharp.Net
 * DataStructures
 * Unit testing
-    * NUnit
-    * XUnit
-    * MOQ
-    * tSQLt
-    * JUnit
+  * NUnit
+  * XUnit
+  * MOQ
+  * tSQLt
+  * JUnit
 * Net
-    * ADO.NET
-    * Entity Framework
-    * WCF Data Services
+  * ADO.NET
+  * Entity Framework
+  * WCF Data Services
 * Net Core
-    * Entity Framework Core
+  * Entity Framework Core
 * SQL Server
 * NodeJS
 * Java
@@ -69,15 +71,15 @@ A growing collection of notes on following topics
 * Javascript
 * RxJS
 * Unit Testing
-    * JavaScript / TypeScript
-        * Mocha
-        * Chai
-        * SinonJS
-        * Istanbul
+  * JavaScript / TypeScript
+    * Mocha
+    * Chai
+    * SinonJS
+    * Istanbul
 * Integration testing
-    * Selenium
-    * PhantomJS
-    * Headless Chrome
-    * Puppeteer
+  * Selenium
+  * PhantomJS
+  * Headless Chrome
+  * Puppeteer
 * Sass
 * css
