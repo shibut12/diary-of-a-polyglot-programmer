@@ -18,6 +18,7 @@ A growing collection of notes on following topics
 * Object oriented Programming
 * Prototype oriented programming
 * OData
+* Machine learning
 
 ## Platform
 
