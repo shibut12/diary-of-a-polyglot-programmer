@@ -18,7 +18,6 @@ The 23 Gang Of Four (GoF) patterns are generally considered the foundation for a
 | Operations        | Template method, State, Strategy, Command, Interpreter                    |
 | Extensions        | Decorator, Iterator, Visitor                                              |
 
-
 ## Creational Patterns
 
 ### Abstract Factory
