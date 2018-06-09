@@ -29,7 +29,7 @@ Creates an instance of several families of classes.
 
 ### Builder
 
-Separates object construction from its representation.
+Separates object construction from its representation. 
 
 ### Factory Method
 
