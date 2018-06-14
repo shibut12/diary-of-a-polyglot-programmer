@@ -2,6 +2,8 @@
 
 Is a PrototypeOriented programming language. It is interpreted and dynamically typed
 
+ES2015 / ES6 is documented [here](/JavaScript/es2015-es6.md)
+
 ## Objects
 
 ### Key concepts
