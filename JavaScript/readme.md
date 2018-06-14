@@ -2,7 +2,9 @@
 
 Is a PrototypeOriented programming language. It is interpreted and dynamically typed
 
-ES2015 / ES6 is documented [here](/JavaScript/es2015-es6.md)
+## ES2015
+
+Previously called ES6, ES2015 is the most extensive update to the _JavaScript_ language since the publication of its first edition in 1997. Additional documentation is [here](/JavaScript/es2015-es6.md)
 
 ## Objects
 
