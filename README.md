@@ -69,6 +69,7 @@ A growing collection of notes on following topics
 * Angular
 * Angular Material
 * Javascript
+  * ES2015 / ES6
 * RxJS
 * Unit Testing
   * JavaScript / TypeScript
