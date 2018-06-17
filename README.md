@@ -19,7 +19,7 @@ A growing collection of notes on following topics
 * Object oriented Programming
 * Prototype oriented programming
 * OData
-* Machine learning
+* Machine learning 
 
 ## Platform
 
@@ -73,7 +73,7 @@ A growing collection of notes on following topics
 * RxJS
 * Unit Testing
   * JavaScript / TypeScript
-    * Mocha
+    * Mocha 
     * Chai
     * SinonJS
     * Istanbul
