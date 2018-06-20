@@ -254,3 +254,40 @@ task Task5 {
     }
 }
 ```
+
+### Task phases
+
+1. Initialization phase - Used to configure multi project builds
+2. Configuration phase - Execute code in the task that's not action (E.g: `task.description`)
+3. Execution phase - Actions are executed.
+
+#### doFirst and doLast
+
+`doFirst` contains the code to run before all code in the task
+
+`doLast` contaains the code that runs after all code in the task
+
+```groovy
+task Task1 {
+    description "This is Task 1"
+    doFirst {
+        println "Task 1 - First"
+    }
+    doLast {
+        println "Task 1 - Last"
+    }
+    doFirst {
+        println "Task 1 - First - ammended"
+    }
+}
+```
+
+```bash
+# output
+$ gradle Task1
+
+> Task :Task1
+Task 1 - First - ammended
+Task 1 - First
+Task 1 - Last
+```
