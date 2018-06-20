@@ -55,3 +55,20 @@ BUILD SUCCESSFUL in 1s
 ```
 
 ## Gradle builds
+
+* Gradle has a build file
+  * Typically called `build.gradle`
+  * Build file contains 
+    * Tasks
+    * Plugins
+    * Dependencies
+
+### Simple gradle build file
+
+```gradle
+task hello {
+    doLast {
+        println "Hello, Gradle"
+    }
+}
+```
