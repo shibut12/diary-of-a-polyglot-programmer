@@ -313,6 +313,7 @@ task Task1 {
 
 task Task2 {
     description "This is Task 2"
+    dependsOn Task1
     doFirst {
         println "Task 2 - First"
     }
@@ -320,8 +321,6 @@ task Task2 {
         println "Task 2 - Last"
     }
 }
-
-Task2.dependsOn Task1
 ```
 
 ```bash
