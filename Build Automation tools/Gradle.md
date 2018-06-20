@@ -72,7 +72,7 @@ BUILD SUCCESSFUL in 1s
 
 ### Simple gradle build file
 
-```gradle
+```groovy
 task hello {
     doLast {
         println "Hello, Gradle"
@@ -100,7 +100,7 @@ used to perform stadard build operations for a Java program.
 
 Create a `build.gradle` file on the root of the Java program. The java source code should reside in `src\main\java\com\<package-name>` folder.
 
-```gradle
+```groovy
 apply plugin: 'java'
 ```
 
@@ -186,7 +186,7 @@ _Task_ is the code that _Gradle_executes
 ### Creating a simple task
 
 Add following lines into  a `build.gradle` file.
-```gradle
+```groovy
 project.task("Task1")
 task("Task2")
 task "Task3"
@@ -211,7 +211,7 @@ Task4 - Task 4 description
 
 ### Running a task
 
-All taks have `doLast`, add code here to execute.
+All taks have `doLast`, add code here to execute. It is the last code that task does. The operator `<<` has same effect as defining a doLast` block.
 
 ```groovy
 task Task4
@@ -219,13 +219,38 @@ Task4.description = "Task 4 description"
 Task4.doLast {
     println "This is Task 4"
 }
+Task3 << {
+  println "This is Task 3"
+}
+Task3 << {
+  println "This is added to Task 3
+}
 ```
 
-Run `gradle Task4` to run Task4.
+Run following commands to run the tasks.
 
 ```bash
+# output for gradle Task4
 $ gradle Task4
 
 > Task :Task4
 This is Task 4
+
+# output for gradle Task3
+$ gradle Task3
+
+> Task :Task3
+This is Task 3
+This is added to Task 3
+```
+
+#### A better way of defining a task
+
+```groovy
+task Task5 {
+    description "This is Task 5"
+    doLast {
+        println "This is Task 5"
+    }
+}
 ```
