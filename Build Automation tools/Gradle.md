@@ -24,6 +24,12 @@ Is an open-source build automation tool that builds upon the concepts of _Apache
 * Uses _Java_ to define build configuration
 * Supports dependencies
 
+## Gradle commands
+
+| Command       | Description               | 
+| ------------- |:-------------------------:|
+| Tasks         | Lists all available tasks |
+
 ## Installing and configuring gradle
 
 * Download binaries from [gradle.org](https://gradle.org/releases/).
