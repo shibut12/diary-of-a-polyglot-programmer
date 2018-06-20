@@ -72,3 +72,17 @@ task hello {
     }
 }
 ```
+
+Run following command on a `terminal` to run this task
+
+```bash
+$ cd <file-location>
+$ gradle hello
+
+# Output
+> Task :hello
+Hello, world
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+```
