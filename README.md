@@ -29,6 +29,10 @@ A growing collection of notes on following topics
 * TFS
   * TFS Power tools (tfpt)
 
+## Build automation tools
+
+* Gradle
+
 ## IOT
 
 * MQTT
