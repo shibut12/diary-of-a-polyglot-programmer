@@ -26,9 +26,9 @@ Is an open-source build automation tool that builds upon the concepts of _Apache
 
 ## Gradle commands
 
-| Command       | Description               | 
-| ------------- |:-------------------------:|
-| Tasks         | Lists all available tasks |
+| Command       | Description               | Example                  | 
+| ------------- |:-------------------------:|:-------------------------:
+| Tasks         | Lists all available tasks | `> gradle tasks`         |
 
 ## Installing and configuring gradle
 
