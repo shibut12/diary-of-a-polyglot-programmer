@@ -30,6 +30,7 @@ Is an open-source build automation tool that builds upon the concepts of _Apache
 | ------------- |:-------------------------:|:-------------------------:
 | Tasks         | Lists all available tasks | `> gradle tasks`         |
 | Wrapper       | Sets a specific version of Gradle to run |  |
+| dependsOn     | Specify a task dependdency | `Task2.dependsOn Task1`
 
 ## Installing and configuring gradle
 
@@ -290,4 +291,48 @@ $ gradle Task1
 Task 1 - First - ammended
 Task 1 - First
 Task 1 - Last
+```
+
+#### Task Dependency
+
+The `dependsOn` command specify the _task_ that another _task_ is dependes upon. It will cause both the tasks to run.
+
+```groovy
+task Task1 {
+    description "This is Task 1"
+    doFirst {
+        println "Task 1 - First"
+    }
+    doLast {
+        println "Task 1 - Last"
+    }
+    doFirst {
+        println "Task 1 - First - ammended"
+    }
+}
+
+task Task2 {
+    description "This is Task 2"
+    doFirst {
+        println "Task 2 - First"
+    }
+    doLast {
+        println "Task 2 - Last"
+    }
+}
+
+Task2.dependsOn Task1
+```
+
+```bash
+$ gradle Task2
+
+> Task :Task1
+Task 1 - First - ammended
+Task 1 - First
+Task 1 - Last
+
+> Task :Task2
+Task 2 - First
+Task 2 - Last
 ```

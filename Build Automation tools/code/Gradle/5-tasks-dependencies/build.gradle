@@ -1,0 +1,24 @@
+task Task1 {
+    description "This is Task 1"
+    doFirst {
+        println "Task 1 - First"
+    }
+    doLast {
+        println "Task 1 - Last"
+    }
+    doFirst {
+        println "Task 1 - First - ammended"
+    }
+}
+
+task Task2 {
+    description "This is Task 2"
+    doFirst {
+        println "Task 2 - First"
+    }
+    doLast {
+        println "Task 2 - Last"
+    }
+}
+
+Task2.dependsOn Task1
