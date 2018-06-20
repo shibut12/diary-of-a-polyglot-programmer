@@ -338,10 +338,19 @@ Task 2 - Last
 
 #### Task properties
 
-Variables can be defined using `def` keyword, then using _string interpolation_ `$` these variables can be set on _task properties_.
+Variables can be defined using `def` keyword, then using _string interpolation_ `$` these variables can be set on _task properties_. 
+
+##### def vs project.ext
+
+The variable defined with `def` is avaialable within the build file scope
+
+The variable defined with `project.ext` is available in other build files as well.
+
+
 
 ```groovy
 def projectVersion = "2.0"
+project.ext.buildVersion = "1.0"
 
 task Task1 {
     description "This is Task 1"
@@ -349,7 +358,7 @@ task Task1 {
         println "Task 1 - First, project version $projectVersion"
     }
     doLast {
-        println "Task 1 - Last"
+        println "Task 1 - Last, Build version $project.ext.buildVersion "
     }
 }
 ```
@@ -359,5 +368,5 @@ $ gradle Task1
 
 > Task :Task1
 Task 1 - First, project version 2.0
-Task 1 - Last
+Task 1 - Last, Build version 1.0
 ```

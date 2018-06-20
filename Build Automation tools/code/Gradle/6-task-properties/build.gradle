@@ -1,4 +1,5 @@
 def projectVersion = "2.0"
+project.ext.buildVersion = "1.0"
 
 task Task1 {
     description "This is Task 1"
@@ -6,6 +7,6 @@ task Task1 {
         println "Task 1 - First, project version $projectVersion"
     }
     doLast {
-        println "Task 1 - Last"
+        println "Task 1 - Last, Build version $project.ext.buildVersion "
     }
 }
