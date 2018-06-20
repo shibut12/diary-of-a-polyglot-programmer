@@ -166,3 +166,66 @@ BUILD SUCCESSFUL in 1s
 ```
 
 ## Basic Gradle tasks
+
+_Task_ is the code that _Gradle_executes
+
+* Has a Lifecycle
+  * Initialization
+  * Configuration
+  * Execution
+* Has Properties
+  * Description
+  * Group that belongs to
+  * Can contain own properties like the directories etx
+* Has Action - Code that task executes
+  * First action - Code that runs before other codes in the action
+  * Last action - Code that runs the part of the task
+* Has dependencies
+  * Defines the order
+
+### Creating a simple task
+
+Add following lines into  a `build.gradle` file.
+```gradle
+project.task("Task1")
+task("Task2")
+task "Task3"
+task Task4
+
+Task4.description = "Task 4 description"
+```
+
+The `project` keyword is optional, gradle assumes all the tasks at the project level.
+
+Run `gradle tasks --all` in a terminal window
+
+```bash
+#output
+Other tasks
+-----------
+Task1
+Task2
+Task3
+Task4 - Task 4 description
+```
+
+### Running a task
+
+All taks have `doLast`, add code here to execute.
+
+```groovy
+task Task4
+Task4.description = "Task 4 description"
+Task4.doLast {
+    println "This is Task 4"
+}
+```
+
+Run `gradle Task4` to run Task4.
+
+```bash
+$ gradle Task4
+
+> Task :Task4
+This is Task 4
+```
