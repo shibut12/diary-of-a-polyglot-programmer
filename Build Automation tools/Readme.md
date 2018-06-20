@@ -1,3 +1,3 @@
 # Build automation tools
 
-* [Gradle](gradle.md) - Open source build automation tool for Java
+* [Gradle](Gradle.md) - Open source build automation tool for Java
