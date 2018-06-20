@@ -4,11 +4,6 @@ A growing collection of notes on following topics
 
 ** All the documentation included in this repository are colleted from internet. It is basically an electronic version of the notes that I used to collect in many notebooks. I dont intend to share any copyright protected materials here. Let me know if you come across any copy right protected material in my notes. I will take appropriate action.
 
-## IOT
-
-* MQTT
-  * Mosquitto MQTT
-
 ## Fundamentals
 
 * Algorithms
@@ -33,6 +28,11 @@ A growing collection of notes on following topics
 * Git
 * TFS
   * TFS Power tools (tfpt)
+
+## IOT
+
+* MQTT
+  * Mosquitto MQTT
 
 ## Server side
 
