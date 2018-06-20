@@ -335,3 +335,29 @@ Task 1 - Last
 Task 2 - First
 Task 2 - Last
 ```
+
+#### Task properties
+
+Variables can be defined using `def` keyword, then using _string interpolation_ `$` these variables can be set on _task properties_.
+
+```groovy
+def projectVersion = "2.0"
+
+task Task1 {
+    description "This is Task 1"
+    doFirst {
+        println "Task 1 - First, project version $projectVersion"
+    }
+    doLast {
+        println "Task 1 - Last"
+    }
+}
+```
+
+```bash
+$ gradle Task1
+
+> Task :Task1
+Task 1 - First, project version 2.0
+Task 1 - Last
+```
