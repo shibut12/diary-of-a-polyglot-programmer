@@ -1,4 +1,4 @@
-package main.java.net.codewithdot;
+package net.codewithdot;
 
 public class Hello {
     public static void main(String[] args){
