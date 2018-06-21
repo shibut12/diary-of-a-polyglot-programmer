@@ -58,6 +58,8 @@ A growing collection of notes on following topics
   * MOQ
   * tSQLt
   * JUnit
+  * Mockito
+  * JUnit
 * Net
   * ADO.NET
   * Entity Framework
