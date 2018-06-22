@@ -14,7 +14,7 @@ A growing collection of notes on following topics
 * Object oriented Programming
 * Prototype oriented programming
 * OData
-* Machine learning 
+* Machine learning
 
 ## Platform
 
@@ -38,9 +38,40 @@ A growing collection of notes on following topics
 * MQTT
   * Mosquitto MQTT
 
-## Server side
+## Testing
+
+### Unit testing
+
+* Test frameworks
+  * NUnit
+  * XUnit
+  * JUnit
+  * tSQLt
+  * Mocha
+  * Chai
+* Mocking frameworks
+  * MOQ
+  * Mockito
+  * SinonJS
+* Code coverage
+  * Istanbul
+
+### Integration testing
+  
+* Selenium
+* PhantomJS
+* Headless Chrome
+* Puppeteer
+
+## Database
+
+* SQL Server
+
+## Backend
 
 * C++
+* NodeJS
+* Java
 * ASP.NET
   * Web API
   * MVC
@@ -52,41 +83,19 @@ A growing collection of notes on following topics
   * SignalR Core
 * CSharp.Net
 * DataStructures
-* Unit testing
-  * NUnit
-  * XUnit
-  * MOQ
-  * tSQLt
-  * JUnit
-  * Mockito
-  * JUnit
 * Net
   * ADO.NET
   * Entity Framework
   * WCF Data Services
 * Net Core
   * Entity Framework Core
-* SQL Server
-* NodeJS
-* Java
 
-## Client Side
+## Front end
 
 * Angular
 * Angular Material
 * Javascript
   * ES2015 / ES6
 * RxJS
-* Unit Testing
-  * JavaScript / TypeScript
-    * Mocha 
-    * Chai
-    * SinonJS
-    * Istanbul
-* Integration testing
-  * Selenium
-  * PhantomJS
-  * Headless Chrome
-  * Puppeteer
 * Sass
 * css
