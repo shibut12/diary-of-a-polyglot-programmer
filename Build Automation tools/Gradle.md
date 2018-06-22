@@ -24,6 +24,15 @@ Is an open-source build automation tool that builds upon the concepts of _Apache
 * Uses _Java_ to define build configuration
 * Supports dependencies
 
+## Installation
+
+### Windows
+
+1. Download `zip` file from [https://gradle.org/releases/](https://gradle.org/releases/)
+2. Add location of `\bin` to `Path` environment variable
+3. Create new `GRADLE_HOME` _environment variable_, set `path of_  __gradle directory__ as `value`
+4. Open a command prompt (cmd) and run `gradle -version` to verify installtion
+
 ## Gradle commands
 
 | Command       | Description               | Example                  |
