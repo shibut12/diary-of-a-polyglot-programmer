@@ -26,11 +26,12 @@ Is an open-source build automation tool that builds upon the concepts of _Apache
 
 ## Gradle commands
 
-| Command       | Description               | Example                  | 
+| Command       | Description               | Example                  |
 | ------------- |:-------------------------:|:-------------------------:
 | Tasks         | Lists all available tasks | `> gradle tasks`         |
 | Wrapper       | Sets a specific version of Gradle to run |  |
 | dependsOn     | Specify a task dependdency | `Task2.dependsOn Task1`
+| init          | Create a new project with all defaults using a template | `gradle init --type java-library ` 
 
 ## Installing and configuring gradle
 
