@@ -1,6 +1,6 @@
 # React
 
-A JavaAScript library for building user interfaces.
+A JavaAScript library for building user interfaces. The libreary is created and maintained by Facebook.
 
 ## Features
 
@@ -24,3 +24,34 @@ A JavaAScript library for building user interfaces.
 * React routing for routing
 * Facebook flux for unidirectional data flow
 * Gulp task runner
+
+## Advantages and Disadvantages
+
+
+|Advantages                               |  Disadvantages                                         |
+------------------------------------------|--------------------------------------------------------|
+|Conceptual Simplicity                    | Limited in scope
+|Recat is faster than competitors         | Productivity 
+|Simple model for server side rendering   | Complex tooling
+
+## Architecture
+
+    PROPS -----> RENDER  <---- STATE <---|
+                   |                     |
+                   |                     |
+                   |                     | Events
+                   |                     |
+                   \/                    |
+                  DOM                    |
+                   |                     |
+                   |---------------------|
+
+Model + component = DOM
+
+## Comparison with Angular
+
+|React                                    |  Angular                                               |
+------------------------------------------|--------------------------------------------------------|
+|Renders UI and handles events            | A Complete UI framework
+|Uses JavaScript for view logic           | Custom template expression syntax
+|Applicaitons are written in JavaScript   | Written in TypeScript
