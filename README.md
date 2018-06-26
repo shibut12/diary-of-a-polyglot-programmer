@@ -22,6 +22,8 @@ A growing collection of notes on variety of topics
 * Windows
 * Azure
 * Heroku
+* Docker
+* Kubernetes
 
 ## Source code version control
 
