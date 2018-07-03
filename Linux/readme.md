@@ -4,7 +4,7 @@
 
 How an individual computer decides where a data is stored and how it is keeps up where it is. The linux file system is inherited from unix.
 
-![Linux filesystem overview](https://github.com/shibut12/diary-of-a-polyglot-programmer/blob/master/Linux/linux-file-system.png "Linux file system overview")
+![Linux filesystem overview](https://github.com/shibut12/diary-of-a-polyglot-programmer/blob/master/Linux/linux-file-system.png "Linux file system overview") 
 
 ### Root (/)
 
