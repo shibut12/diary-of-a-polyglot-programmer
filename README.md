@@ -7,7 +7,7 @@ A growing collection of notes on variety of topics
 ## Fundamentals
 
 * Algorithms
-* Architecture
+* Architecture 
 * Cryptography
 * Design Patterns
 * SOLID Principles
