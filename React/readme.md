@@ -55,3 +55,19 @@ Model + component = DOM
 |Renders UI and handles events            | A Complete UI framework
 |Uses JavaScript for view logic           | Custom template expression syntax
 |Applicaitons are written in JavaScript   | Written in TypeScript
+
+## JSX
+
+A Syntax extension to JavaScript. It is used with React to descriibe what the UI should look like. JSX prodices __React elements__.
+
+### Hello world JSX
+
+```javascript
+const name = 'Shibu';
+const element = <h1>Hello, {name}</h1>;
+
+ReactDOM.render(
+    element,
+    document.getElementById('root)
+);
+```
