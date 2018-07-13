@@ -15,4 +15,4 @@ During the data replication process, copies of the data are distributed from a s
 | All data is distributed on all participating sites at the same time   | Allows sites to have different data at the same time |
 | Synchronous process   | Is an asynchronous process, so there is a delay during which all copies of data are matched on all sites |
 | Administration becomes difficult and reliability decreases as number of participating sites increase   | Cheaper and more reliable |
-| Expensive   | Cheaper and more reliable |
+| Expensive   | Cheaper and more reliable | 
