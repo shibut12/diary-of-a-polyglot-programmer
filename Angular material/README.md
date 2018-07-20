@@ -1,5 +1,5 @@
 # Angular material
-A set of reusable, well tested and accessible components based of google material design specifications for building client side web applications.
+A set of reusable, well tested and accessible components based of google material design specifications for building client side web applications. 
 
 ## Material Design Goals
 * Synthesizes classic principles.
