@@ -87,7 +87,7 @@ A growing collection of notes on variety of topics
 * ASP.NET Core
   * MVC
   * SignalR Core
-* CSharp.Net
+* CSharp.Net 
 * DataStructures
 * Net
   * ADO.NET
