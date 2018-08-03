@@ -106,4 +106,3 @@ A growing collection of notes on variety of topics
 * RxJS
 * Sass
 * css
- 
