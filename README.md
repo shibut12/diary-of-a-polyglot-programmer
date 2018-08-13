@@ -102,6 +102,7 @@ A growing collection of notes on variety of topics
 * Angular
 * Angular Material
 * React
+  * Flux & Redux
 * Javascript
   * ES2015 / ES6
 * RxJS
