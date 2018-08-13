@@ -6,9 +6,9 @@ A growing collection of notes on variety of topics
 
 ## Fundamentals
 
-* Algorithms
 * Architecture
 * Cryptography
+* Data structures and algorithms
 * Design Patterns
 * Dynamic Programming
 * Machine learning
