@@ -118,7 +118,7 @@ int intersectionSize(arrayA, arrayB){
 }
 ```
 
-#### 3. Drop non-dominate terms
+#### 4. Drop non-dominate terms
 
 If _left_ and _right_ are equivalent (see rule 2) , then center is too. Consider following example.
 
