@@ -1,6 +1,6 @@
 # Statistics
 
-*[Linear regression](#linear-regression)
+* [Linear regression](#linear-regression)
 
 ## Linear Regression
 
