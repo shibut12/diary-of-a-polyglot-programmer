@@ -16,6 +16,7 @@ A growing collection of notes on variety of topics
 * OData
 * Prototype oriented programming
 * SOLID Principles
+* Statistics
 
 ## Platform
 
