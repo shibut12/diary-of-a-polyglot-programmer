@@ -2,9 +2,25 @@
 
 ## Basics
 
-### Node
+## Array
 
-### Node Chains
+## Ordered array
+
+## Stack
+
+## Queue
+
+## Binary tree
+
+## Red-black tree
+
+## 2-3-4 tree
+
+## Hash table
+
+## Heap
+
+## Graph
 
 ## Linked list
 
