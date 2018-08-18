@@ -17,7 +17,7 @@ A growing collection of notes on variety of topics
 * Prototype oriented programming
 * SOLID Principles
 * Statistics
-
+ 
 ## Platform
 
 * Linux
