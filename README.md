@@ -14,6 +14,7 @@ A growing collection of notes on variety of topics
 * Design Patterns
 * Dynamic Programming
 * Machine learning
+* Math
 * Object oriented Programming
 * OData
 * Prototype oriented programming
