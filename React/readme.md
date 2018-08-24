@@ -2,6 +2,44 @@
 
 A JavaAScript library for building user interfaces. The libreary is created and maintained by Facebook.
 
+## Flux and Redux
+
+* Flux is a pattern redux is a library
+* Flux and Redux have actions. Actions can be compared to events in JS.
+  * In Flux
+    * an action is a simple JavaScript Object
+  * In Redux
+    * by default an action is a simple JavaScript object.
+    When using Redux middleware, action can be functions and promises
+* Stores
+  * Flux
+    * Can have multiple stores per application, each store is a singleton object.
+  * Redux
+    * Can have only a single store per Application, data usually separated into data domains internally.
+* Dispatcher
+  * Flux
+    * Has a single dispatcher, and all action have to pass through that dispatcher.
+    * It is a singleton object
+  * Redux
+    * Has no dispatcher entity, instead the store has the dispatching process baked in.
+    * A Redux store exposes a few simple API function, one of them is to dispatch actions.
+* Store
+  * Flux
+    * The action on data is written in Store.
+    * The store can decide what parts of the data to expose publicly.
+    * This is the key player in flux.
+    * You can mutate the state as you wish
+  * Redux
+    * The login on waht to perform on received data is in Reducer function. 
+    * This gets called for every action that gets dispatched.
+    * A store cannot be defined without a reducer function.
+    8 A Redux Receiver is a simple function that receives the previous state and one action, and it returns the new state based on the action.
+    * In redux app you can split your reducer into simpler functions as you would do with any other function.
+    * The smartest player in redux app is the reducer.
+    * Redux will expose whatever returned from store's reducer. This is one constraint.
+    * You cannot mutate the state.
+    * Redux reducers always copy the state they receive and returns a modified version of the state's copy, not the original.
+
 ## Features
 
 * JSX - Martkups in javaScript
