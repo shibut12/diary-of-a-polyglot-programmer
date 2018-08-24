@@ -109,6 +109,6 @@ A growing collection of notes on variety of topics
   * Flux & Redux
 * Javascript
   * ES2015 / ES6
-* RxJS 
+* RxJS
 * Sass
 * css
