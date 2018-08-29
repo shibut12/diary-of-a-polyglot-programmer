@@ -181,3 +181,31 @@ const HelloWorld = (props) => {
   );
 };
 ```
+
+#### Key benefits of stateless components
+
+1. No class is needed
+2. Avoid `this` keyword
+3. Enforced best practices, good for presentational components
+4. Hi Signal-to-noise ratio
+5. Enhanced code completion / intellisense
+6. Bloated components are obvious
+7. Easy to uinderstand
+8. Easy to test
+9. Improve performances as it does not have any states
+
+#### When should we use Stateless components
+
+Class component                                  | Stateless component
+--------------------------------------------------|-----------------------------
+If State, ref and life cycle methods are needed   | Every where else
+If needed chil;d functions(for better performance)| Every where else
+
+### Container and Presentation component
+
+Container component                                  | Presentation component
+--------------------------------------------------|-----------------------------
+Little to no markeup   | Contains only markups
+Typically stateful| Stateless
+Pass data and actions down| Recieve data and actions via props
+Knows about redux | doesnt know about redux, relys completely on props or state
