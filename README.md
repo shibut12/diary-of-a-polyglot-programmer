@@ -39,6 +39,7 @@ A growing collection of notes on variety of topics
 ## Build automation tools
 
 * Gradle
+* npm scripts
 
 ## Bundler
 
