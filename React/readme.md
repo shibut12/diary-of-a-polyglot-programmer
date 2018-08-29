@@ -156,4 +156,15 @@ class Contacts extends React.Component{
 }
 ```
 * ES5 stateless function
+
+Introduuced in _react 1.4_. It has simpler syntax. All the data for the components through _props_.
+
+```js
+var HelloWorld = function(props){
+  return(
+    <h1>Hello world</h1>
+  );
+};
+```
+
 * ES6 stateless function
