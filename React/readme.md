@@ -114,7 +114,7 @@ ReactDOM.render(
 ### Different ways to create a component
 
 * ES5 createClass method
-
+Original method suggested when react introiduced.
 ```js
 var HelloWorld = React.createClass({
   render: function(){
@@ -125,6 +125,35 @@ var HelloWorld = React.createClass({
 });
 ```
 
+React does not require explicit binding
+
+```js
+//This will work in ES5
+<div onCLick={this.handleClick}>Click here</div>
+```
+
 * ES6 class extends React.Component
+
+React requires explicit binding with ES6 class.
+
+```js
+//This will not work in ES6
+<div onCLick={this.handleClick}>Click here</div>
+
+//This will work in ES6
+<div onCLick={this.handleClick.bind(this)}>Click here</div>
+```
+
+A better approach to bind function in ES6 is through _class constructor_.
+
+```js
+class Contacts extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+}
+```
 * ES5 stateless function
 * ES6 stateless function
