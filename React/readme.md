@@ -168,3 +168,16 @@ var HelloWorld = function(props){
 ```
 
 * ES6 stateless function
+
+Following are recommended in ES6.
+
+1. Arrow => functions over _function_ keyword.
+2. Use _const_ or _let_ instead _var_.
+
+```js
+const HelloWorld = (props) => {
+  return(
+    <h1>Hello world</h1>
+  );
+};
+```
