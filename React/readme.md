@@ -109,3 +109,22 @@ ReactDOM.render(
     document.getElementById('root')
 );
 ```
+## Components
+
+### Different ways to create a component
+
+* ES5 createClass method
+
+```js
+var HelloWorld = React.createClass({
+  render: function(){
+    return(
+      <h1>Hello world</h1>
+    );
+  }
+});
+```
+
+* ES6 class extends React.Component
+* ES5 stateless function
+* ES6 stateless function
