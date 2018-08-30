@@ -8,6 +8,18 @@ There is one main __store__ for the entire application, the _store_ holds state 
 
 _Vanilla JS_ is suitable for ultra simple app that does not need any DOM manipulation. You can add _jQuery_ into the application if you need reusable code for DOM manipulation and other simplified HTTP requests etc, the disadvantage is maintaining the code is complicated over the time. _React_ is great for bigger projects because of _clear component model, synthetic events, and virtual dom_. React becomes complex when same data need to display in multiple places. _Redux_ makes data management very easy.
 
+## Foundation of Redux
+
+### 1. One Immutable store for entire application
+
+Helps debugging, helps server rendering, do undo / redo etc.
+
+### 2. Actions are always trigger changes
+
+Action describes user's intent, example a click event for new customer.
+
+### 3. State is changed by pure function (reducers)
+
 ### Start
 
 Not in the redux cycle, but is a starting point
