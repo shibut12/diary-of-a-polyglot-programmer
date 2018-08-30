@@ -29,3 +29,7 @@ These are pure functions.
 ### Containers
 
 These are react components that receive data via _props_.
+
+## Redux flow
+
+![](redux-flow.png)
