@@ -20,58 +20,12 @@ Action describes user's intent, example a click event for new customer.
 
 ### 3. State is changed by pure function (reducers)
 
-### Start
+## Core components
 
-Not in the redux cycle, but is a starting point
+### Reducers
 
-Book the tickets
+These are pure functions.
 
-```js
-function BookTicketsClick(){
-    //Code for dispatch
-}
-```
+### Containers
 
-### Dispatch
-
-Find out when your offer expires by performing an __Action__.
-
-```js
-//Dispatch
-store.dispatch(() =>{
-    //return action code;
-})
-
-//Action
-{
-    type: 'BOOK_TICKETS',
-    value: time
-}
-```
-
-### Reducer
-
-Add the travel time to current time and find out how much time do you have left.
-
-```js
-const reducer = Redux.combineReducers({
-    ticket:(state={endTime:null}, action) => {
-        if(action.type == 'BOOK_TICKETS'){
-            //do something with state
-            return state;
-        }
-        if(action.type=='STOP_BOOKING'){
-            //do something with state
-            return state;
-        }
-    }
-})
-```
-
-### State
-
-Add these information into a notebook
-
-```js
-store.getState().ticket;
-```
+These are react components that receive data via _props_.
