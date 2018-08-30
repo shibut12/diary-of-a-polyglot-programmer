@@ -2,9 +2,7 @@
 
 ## Concept
 
-A webpage can perform a wide variety of operations, one can use _redux_ to keep track of all these operations. Imagine the following scenario.
-
-You found a way to book tickets for a show at a very discounted price, the caveat is you need to be at the place to pickup ticket in _x hrs_ you will know this time when you book the ticket, the time now is _10:00AM__.
+There is one main __store__ for the entire application, the _store_ holds state of all components. _State_ of the _store_ can only be modified by __reducers__, _store_ can have only __one root reducer__, the _root reducer_ is created by combining many _reducers_. The reducers use an __action__ to identify the _action_ that required to perform, an _action_ contains __type__ and __payload__. The __containers__ are the `.jsx` files that contains logic behind _components_, the _containers_ __dispatch__ an _action_ to perform an operation. When an _action_ is _dispatched_, all the _reducers are notified_. The _reducers_ use a `switch` operator on _action.payload_ to identify if the action is intended for it. The __react components__ include the __Containers__ in it. 
 
 ### Start
 
