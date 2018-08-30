@@ -106,6 +106,106 @@ const element = <h1>Hello, {name}</h1>;
 
 ReactDOM.render(
     element,
-    document.getElementById('root)
+    document.getElementById('root')
 );
 ```
+## Components
+
+### Different ways to create a component
+
+* ES5 createClass method
+Original method suggested when react introiduced.
+```js
+var HelloWorld = React.createClass({
+  render: function(){
+    return(
+      <h1>Hello world</h1>
+    );
+  }
+});
+```
+
+React does not require explicit binding
+
+```js
+//This will work in ES5
+<div onCLick={this.handleClick}>Click here</div>
+```
+
+* ES6 class extends React.Component
+
+React requires explicit binding with ES6 class.
+
+```js
+//This will not work in ES6
+<div onCLick={this.handleClick}>Click here</div>
+
+//This will work in ES6
+<div onCLick={this.handleClick.bind(this)}>Click here</div>
+```
+
+A better approach to bind function in ES6 is through _class constructor_.
+
+```js
+class Contacts extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+}
+```
+* ES5 stateless function
+
+Introduuced in _react 1.4_. It has simpler syntax. All the data for the components through _props_.
+
+```js
+var HelloWorld = function(props){
+  return(
+    <h1>Hello world</h1>
+  );
+};
+```
+
+* ES6 stateless function
+
+Following are recommended in ES6.
+
+1. Arrow => functions over _function_ keyword.
+2. Use _const_ or _let_ instead _var_.
+
+```js
+const HelloWorld = (props) => {
+  return(
+    <h1>Hello world</h1>
+  );
+};
+```
+
+#### Key benefits of stateless components
+
+1. No class is needed
+2. Avoid `this` keyword
+3. Enforced best practices, good for presentational components
+4. Hi Signal-to-noise ratio
+5. Enhanced code completion / intellisense
+6. Bloated components are obvious
+7. Easy to uinderstand
+8. Easy to test
+9. Improve performances as it does not have any states
+
+#### When should we use Stateless components
+
+Class component                                  | Stateless component
+--------------------------------------------------|-----------------------------
+If State, ref and life cycle methods are needed   | Every where else
+If needed chil;d functions(for better performance)| Every where else
+
+### Container and Presentation component
+
+Container component                                  | Presentation component
+--------------------------------------------------|-----------------------------
+Little to no markeup   | Contains only markups
+Typically stateful| Stateless
+Pass data and actions down| Recieve data and actions via props
+Knows about redux | doesnt know about redux, relys completely on props or state
