@@ -40,6 +40,16 @@ A JavaAScript library for building user interfaces. The libreary is created and 
     * You cannot mutate the state.
     * Redux reducers always copy the state they receive and returns a modified version of the state's copy, not the original.
 
+Flux | Redux
+-----|------
+Stores contain state and change logic | Store and change logic are separate
+Multiple stores| one store
+Flat and disconnected stores | Single store with hierarchial reducers
+Singleton dispatcher | No dispatcher
+React components subscribe to stores | Container components utilize connect
+State is mutated | State is immutable
+
+
 ## Features
 
 * JSX - Martkups in javaScript
