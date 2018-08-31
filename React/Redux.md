@@ -99,8 +99,121 @@ Helps to connect `React` with `Store`. The redux library can be used with other 
 
 #### Provider
 
-Attaches app to store
+Attaches app to store. This is defined at the root of your application. Provider then make the store available to all the components in the application (This is done using reac's context).
+
+```js
+<Provider store={this.props.store}>
+    <App />
+</Provider>
+```
 
 #### Connect
 
-Creates container components
+Creates container components. This function wrapps react components so it is connected to the Redux store.
+
+```js
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AuthorPage);
+```
+
+ The `connect()` function accepts two parameters.
+
+ 1. mapStateToProps
+ 2. mapDispatchToProps
+
+#### mapStateToProps
+
+This _function_ descibes what portion of the state should expose as `props`. Once connected this function will be subscribed to the `redux store`, any time store is chanegd the connected function will be called. This function returns an object and it will be converted to properties for the component.
+
+```js
+// components can access state using
+this.props.appState
+
+// definition
+function mapStateToProps(state, ownProps){
+    return {appState: state.authorReducer };
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AuthorPage);
+```
+
+#### mapDispatchToProps
+
+This function specify what actions to expose ans props. The function 'bindActionCreators' is part of redux.
+
+```js
+// components can access state using
+this.props.appState
+
+// definition
+function mapDispatchToProps(dispatch){
+    return {actions: bindActionCreators(actions, dispatch)};
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AuthorPage);
+```
+
+There are 3 ways to handle mapDispatchToProps.
+
+##### 1. Ignore it, use dispatch
+
+When you omit it, dispatch will be automatically attached to the container, you can call it directly in the component.
+
+```js
+this.props.dispatch(loadCourses)
+```
+
+Downsides
+
+1. Requires more boilerplate code
+2. Child components will have to refer to redux specific components
+
+##### 2. Manually wrap
+
+The child components will automatically get properties, they dont have to know about redux.
+
+```js
+//In component
+this.props.loadCourses()
+
+// definition
+function mapDispatchToProps(dispatch){
+    return{
+        loadCourses: () => {
+            dispatch(loadCourses());
+        }
+    }
+}
+```
+
+Downsodes
+
+1. Quite redundant
+
+
+##### 3. Use bindActionCreators
+
+It performs option 2 automatically under the hood. This function ships with Redux. The child components will automatically get properties, they dont have to know about redux.
+
+```js
+//In component
+this.props.actions.loadCourses();
+
+//Definition
+function mapDispatchToProps(dispatch){
+    return{
+        actions: bindActionCreators(actions, dispatch)
+    };
+}
+```
+
+
+### Reselect Memoize
+
+A library that cache data call to / from _store_, this will improve performance if a big list is being processed in the component.
