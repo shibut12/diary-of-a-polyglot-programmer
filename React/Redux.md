@@ -215,3 +215,27 @@ function mapDispatchToProps(dispatch){
 ### Reselect Memoize
 
 A library that cache data call to / from _store_, this will improve performance if a big list is being processed in the component.
+
+### Libraries to handle Async
+
+There are  3 most popular libraries.
+
+#### 1. redux-thunk
+
+Is the most popular library, it is created by the creator of _redux_.
+
+#### 2. redux-promise
+
+Least popular library for handling async requests, it is quite new library. It brings good conventions into redux.
+
+#### 3. redux-saga
+
+It uses _ES6_ library and defines a _domain driven convention_ to access data.
+
+#### Thunks vs Sagas
+
+Thunks | Sagas
+-------|------
+Actions can return functions instead of objects. A thunk wraps asynchronous operation in a function | You handle async operations through generators. _Generators_ are the function that can be paused and resumed later. Generator can contain multiple _yield_ statements. At each _yield_ generator can pause.
+Thunks a re clunky to test, you have mock api calls, no easy hook to each individual step | Easy to test
+Simple, learning is easy | hard to learn, Saga has a bigger API compared to thunk
