@@ -196,7 +196,6 @@ Downsodes
 
 1. Quite redundant
 
-
 ##### 3. Use bindActionCreators
 
 It performs option 2 automatically under the hood. This function ships with Redux. The child components will automatically get properties, they dont have to know about redux.
