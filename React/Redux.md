@@ -213,7 +213,6 @@ function mapDispatchToProps(dispatch){
 }
 ```
 
-
 ### Reselect Memoize
 
 A library that cache data call to / from _store_, this will improve performance if a big list is being processed in the component.
