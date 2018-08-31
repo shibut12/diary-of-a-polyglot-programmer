@@ -224,6 +224,18 @@ There are  3 most popular libraries.
 
 Is the most popular library, it is created by the creator of _redux_.
 
+Normally you can only return _objects_ from a function. With _redux-thunk_, you can return _functions_. In _computer science_ a thunk _is a function that wraps an expression in order to delay its evaluation_.
+
+```js
+export function deleteAutor(authorId){
+    return dispatch => {
+        return AuthorApi.deleteAuthor(authorId).then(() => {
+            dispatch(deletedAuthor(authorId));
+        }).catch(handleError);
+    };
+}
+```
+
 #### 2. redux-promise
 
 Least popular library for handling async requests, it is quite new library. It brings good conventions into redux.
