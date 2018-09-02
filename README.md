@@ -10,7 +10,7 @@ A growing collection of notes on variety of topics
 * Cryptography
 * Data structures and algorithms
   * Algorithms
-    * Sorting 
+    * Sorting
 * Design Patterns
 * Dynamic Programming
 * Machine learning
