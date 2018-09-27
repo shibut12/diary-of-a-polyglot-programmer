@@ -9,7 +9,7 @@ A growing collection of notes on variety of topics
 * Architecture
 * Cryptography
 * Data structures and algorithms
-  * Algorithms
+  * Algorithms 
     * Sorting
 * Design Patterns
 * Dynamic Programming
