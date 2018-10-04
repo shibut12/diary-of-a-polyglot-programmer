@@ -15,6 +15,10 @@ A framework to build web application. It is inspired by `Ruby framework Sinatra`
 
 Nancy allows to host application inside _Windows or Linux_ using a _Service or application_. Nancy is `Owin` aware.
 
+### Using AspNet
+
+`Install-Package Nancy.Hosting.AspNet`
+
 ## Conventions
 
 Nancy has many _Built-in_ conventions to boost productivity. _Nancy_ allows developers to _replace conventions_.
