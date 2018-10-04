@@ -101,6 +101,7 @@ A growing collection of notes on variety of topics
   * WCF Data Services
 * Net Core
   * Entity Framework Core
+* NancyFx
 
 ## Front end
 
