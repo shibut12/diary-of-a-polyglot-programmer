@@ -94,6 +94,7 @@ A growing collection of notes on variety of topics
   * MVC
   * SignalR Core
 * CSharp.Net 
+  * Files and streams
 * DataStructures
 * Net
   * ADO.NET
