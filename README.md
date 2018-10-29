@@ -8,6 +8,7 @@ A growing collection of notes on variety of topics
  
 * Architecture
 * Cryptography
+* Cloud Design Patterns
 * Data structures and algorithms
   * Algorithms 
     * Sorting
