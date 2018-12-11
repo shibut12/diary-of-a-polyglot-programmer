@@ -2,9 +2,10 @@
 
 In a nutshell, _Micro front-end architecture_ is micro services design principles applied to _front-end_ layer of application.
 
-## Micro services design principles
+![Micro Front-end architecture overview](micro-front-end-architecture-overview.png)
 
-Micro services are all about smaller components in the form of APIs.
+## Introduction
+Design principles of Micro-frontend is very similar to Micro services design principles. Micro services are all about smaller components in the form of APIs.
 
 ### High Cohesion
 
@@ -29,3 +30,27 @@ By using centralized logging /monitoring each micro service can be observed.
 ### Automation
 
 Each micro service should be able to tested independently.
+
+## Issues with monolith front ends
+
+### Scaling issues
+
+* Front end application cannot be scaled up
+* Require a large front end team
+
+### Communication issues
+
+* Multiple teams for one feature change
+* Back-end teams are not customer focused
+
+### Code and testing complexity
+
+* Increased risk
+* Slows continuous delivery
+
+## Benefits of Micro Front ends
+
+* Helps to create an end to end vertical slice of a feature.
+* The entire vertical slice can be owned by a single team.
+* Allows to scale feature independently.
+* 
