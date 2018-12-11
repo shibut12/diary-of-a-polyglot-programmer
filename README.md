@@ -7,6 +7,7 @@ A growing collection of notes on variety of topics
 ## Fundamentals
  
 * Architecture
+  * Micro front-end architecture
 * Cryptography
 * Cloud Design Patterns
 * Data structures and algorithms
