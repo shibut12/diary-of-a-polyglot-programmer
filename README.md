@@ -8,6 +8,7 @@ A growing collection of notes on variety of topics
  
 * Architecture
   * Micro front-end architecture
+* Aspect oriented programming (AOP)
 * Cryptography
 * Cloud Design Patterns
 * Data structures and algorithms
