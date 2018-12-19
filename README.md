@@ -30,6 +30,7 @@ A growing collection of notes on variety of topics
 * Windows
 * Azure
 * Heroku
+* Google cloud platform (GCP)
 * Docker
 * Kubernetes
 

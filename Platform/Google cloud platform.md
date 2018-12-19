@@ -1,0 +1,2 @@
+# Google cloud platform (GCP)
+
