@@ -16,6 +16,7 @@ A growing collection of notes on variety of topics
     * Sorting
 * Design Patterns
 * Dynamic Programming
+* [Http/2](/http-2/readme.md)
 * Machine learning
 * Math
 * Object oriented Programming
@@ -100,6 +101,7 @@ A growing collection of notes on variety of topics
 * CSharp.Net 
   * Files and streams
 * DataStructures
+* GRPC
 * Net
   * ADO.NET
   * Entity Framework
