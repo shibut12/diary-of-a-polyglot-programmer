@@ -69,4 +69,37 @@ Browsers have a  set of fixed connections.
   * Accepted-Encoding
   * Referrer
   etc
-  
+
+## SPDY
+
+* Started by google in 2009, it is experimental
+* Modifies how requests and responses are sent over the wire
+* Required Https
+* Features
+  * Single connection per host
+  * Header compression
+  * Request prioritization
+  * Server Push
+* Google is deprecating SPDY as Http2 is finalized
+
+## HTTP/2
+
+* IETF (internet Engineering Task Force) - not w3c
+  * http://www.ietf.org
+* Http working group - HTTPbis
+  * https://httpwg.github.io/
+  * Started in 2012
+  * Initially based on Google SPDY
+* HTTP/2 - May 2015, https://tools.ietf.org/html/rfc7540
+* HPACK - May 2015, https://tools.ietf.org/html/rfc7541
+
+### Goals
+
+* Minimize impact of latency
+* Avoid head of line blocking
+* use a single connection (per host)
+* Heep HTTP 1.1 semantics!
+    * Method, status, headers
+* Consumers Dont need to change application code
+    * Should remove some current workarounds
+    
