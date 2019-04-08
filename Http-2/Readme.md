@@ -102,4 +102,55 @@ Browsers have a  set of fixed connections.
     * Method, status, headers
 * Consumers Dont need to change application code
     * Should remove some current workarounds
-    
+
+### Feature of Http 2
+
+* Binary framing layer
+* Streams
+  * Prioritization and dependencies
+* Fully multiplexed on Single TCP Connection
+* Header compression (HPACK)
+* Server Push
+
+#### Binary framing layer
+* Previously text based protocol
+  * Very easy to review and troubleshoot
+* Binary protocol are much easier to parse, less error prone
+* Need tool support
+* Frames
+  * Header
+  * Data
+
+#### Stream
+* How priority is handled
+* Single Request & Response
+* Bidirectional series of frames
+  * Order of frames is insignificant
+  * Integer identifier
+* Client priority hints
+  * Dependencies
+  * Weights
+  * Can be updated at any point
+
+#### Single TCP Connection per host
+
+* Http 1.1 Browsers use ~6 connections per host
+  * Serial requests and responses
+  * Need to decide which requests to make first (Head Of Line blocking)
+* Multiplexing of request and response frames from various streams
+* Uses less resources, more efficient
+
+#### Header Compression (HPACK)
+
+HPACK is a new scheme for compressing headers.
+
+* https://tools.ietf.org/html/rfc7541
+* Techniques
+  * Index value for common headers/values
+  * Indexed list of previously sent headers
+  * Huffman encoding to compress a value
+* Static table for all standard header parameters
+  * Predefined common headers (values)
+* Dynamic table to add user defined header parameters
+  * Maximum size
+* In future requests the compressed values would not be sent if the value is same
