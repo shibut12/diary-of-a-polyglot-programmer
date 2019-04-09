@@ -213,3 +213,13 @@ HPACK is a new scheme for compressing headers.
 * Compression
 * Expirations
 * Content Delivery Network
+
+#### Strategies
+* Optimize for each HTTP version
+  * Detect protocol version
+* Options for detections
+  * Load balancer detect HTTP/2 and pass custom header
+  * UA sniffing
+  * Web server support HTTP/2
+    * Upgrade web server (Windows server 2016)
+    * Use HTTPS everywhere
