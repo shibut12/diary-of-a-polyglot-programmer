@@ -154,3 +154,62 @@ HPACK is a new scheme for compressing headers.
 * Dynamic table to add user defined header parameters
   * Maximum size
 * In future requests the compressed values would not be sent if the value is same
+
+#### Server Push
+
+* Server can anticipate what client will need next
+  * How?
+* Same Origin restrictions
+
+* Better Inlining
+  * Resources are cacheable
+  * No added page weight
+  * Client can reject (RST_STREAM)
+
+* It is experimental
+
+#### Require Https
+
+* Not require is HTTP/2 RFS
+  * TLS 1.2+
+  * Blacklist of cipher suites (Weak ciphers that is not allowed in Http2)
+* Most browsers will only implement with Https
+  * Avoid problems with new protocol and "middleboxes"
+    * Proxy servers
+    * Firewalls
+* Improve security
+
+
+#### Implementations
+
+* https://tinyurl.com/mgmbmq5c
+* IIS 10 (Windows 10 and Windows Server 2016)
+* Kestrel (aspnet core 2.2)
+* Nodejs 11.13
+* Nginx
+
+#### Expectations
+
+* Http/2 isn't magic web performance pixie dust; you can't drop it in and expect your page load times to decrease by 50%.
+* Should help the most in high latency networks or lots of requests to same hosts
+* ~5-15% performance improvement (no changes to the site)
+
+#### Performance techniques to avoid in Http2
+* Bundling Javascript and css files
+* CSS Sprites
+* Domain sharding
+  * Using multiple host names so browsers uses more connections
+* Inlining (Server Push)
+  * Data URIs, CSS, JavaScript 
+
+#### Performance techniques to continue
+
+* Golden rules
+  * Make fewer Http requests
+  * Send as little as possible
+  * Send it as infrequently as possible
+
+* Minification
+* Compression
+* Expirations
+* Content Delivery Network
