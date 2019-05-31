@@ -114,6 +114,7 @@ A growing collection of notes on variety of topics
 
 * Angular
 * Angular Material
+* D3
 * React
   * Flux & Redux
 * Javascript 
