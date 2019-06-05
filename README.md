@@ -33,7 +33,7 @@ A growing collection of notes on variety of topics
 * Heroku
 * Google cloud platform (GCP)
 * Docker
-* Kubernetes
+* Kubernetes 
 
 ## Source code version control
 
