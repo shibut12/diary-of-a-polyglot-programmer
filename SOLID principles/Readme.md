@@ -16,6 +16,21 @@ Every module or  a class in a program should have only one responsibility over a
 
 Robert C martin expresses this principle as "A class should have only one reason to change".
 
+* Dedicated classes are easier to use
+* A problem with one part of a multipurpose class can impact all other components of the application
+
+### Tight coupling
+
+Binds two (or more) details together in a way that's difficult to change.
+
+### Loose coupling
+
+Offers a modular way to choose which details are involved in a particular operation.
+
+### Separation of concerns
+
+Programs should be separated into distinct sections, each addressing a separate concern, or set of information that affects the program.
+
 ## O - OCP: Open Closed Principle
 A Class is open for extension but close for modification, meaning; Classes must be designed in such a way that a class can be added when a new requirement is generated, this class should be extended while modifying using inheritance.
 

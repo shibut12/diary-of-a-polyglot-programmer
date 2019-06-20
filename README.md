@@ -16,6 +16,7 @@ A growing collection of notes on variety of topics
     * Sorting
 * Design Patterns
 * Dynamic Programming
+* [Http/2](/http-2/readme.md)
 * Machine learning
 * Math
 * Object oriented Programming
@@ -30,8 +31,9 @@ A growing collection of notes on variety of topics
 * Windows
 * Azure
 * Heroku
+* Google cloud platform (GCP)
 * Docker
-* Kubernetes
+* Kubernetes 
 
 ## Source code version control
 
@@ -99,6 +101,7 @@ A growing collection of notes on variety of topics
 * CSharp.Net 
   * Files and streams
 * DataStructures
+* GRPC
 * Net
   * ADO.NET
   * Entity Framework
@@ -111,6 +114,7 @@ A growing collection of notes on variety of topics
 
 * Angular
 * Angular Material
+* D3
 * React
   * Flux & Redux
 * Javascript 
