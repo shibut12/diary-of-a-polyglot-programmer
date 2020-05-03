@@ -34,6 +34,7 @@ A growing collection of notes on variety of topics
 * Google cloud platform (GCP)
 * Docker
 * Kubernetes 
+* Mobile
 
 ## Source code version control
 
